@@ -36,7 +36,6 @@ class Query:
 # returns input in the form of a query
 def validate_input(input):
 
-
     category = pp.Word(pp.alphas)
     operator = pp.one_of("= < > <= >= !=")
     specification = pp.Word(pp.alphanums)
@@ -54,11 +53,17 @@ def validate_input(input):
         newQuery = Query(parsed[0], parsed[1], parsed[2], parsed[3], parsed[4], parsed[5], parsed[6])
 
     # else
-    except pp.ParseException:
-        # created parsed query
-        parsed = parsed_query.parse_string(input)
-        newQuery = Query(parsed[0], parsed[1], parsed[2])
+    except pp.ParseException as e:
+        try:
+            # created parsed query
+            parsed = parsed_query.parse_string(input, parse_all=True)
+            newQuery = Query(parsed[0], parsed[1], parsed[2])
 
+        except pp.exceptions.ParseException as e2:
+            print("INVALID INVALID")
+            return None
+
+    print("Valid")
     return newQuery
 
 
@@ -76,7 +81,7 @@ while programOn == True:
     if queryText == "EXIT":
         programOn = False
 
-    if queryText == "HELP":
+    elif queryText == "HELP":
         print("Query structure: \n")
         print("Initial command: category")
         print("Ex. Genre, Year of Release, Category")
@@ -87,7 +92,7 @@ while programOn == True:
         print("input EXIT to end the program")
 
     # if input is validated, make a query object
-    if programOn == True:
+    elif programOn == True:
         newQuery = validate_input(queryText)
     
 
