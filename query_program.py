@@ -12,11 +12,18 @@ import pyparsing as pp
 class Query:
 
     def __init__(self, column, operator, specification):
-        pass
+        self.column = column
+        self.operator = operator
+        self.specification = specification
 
+    def get_column(self):
+        return self.column
+
+    def get_operator(self):
+        return self.operator
     
-
-
+    def get_specification(self):
+        return self.specification
 
 # some function for input validation using pyparsing
 # returns input in the form of a query
