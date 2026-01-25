@@ -11,10 +11,17 @@ import pyparsing as pp
 # instance created when user makes a query
 class Query:
 
-    def __init__(self, column, operator, specification):
+    def __init__(self, column, operator, specification, logical_op=None,
+                 column2 = None, operator2 = None, specification2 = None):
         self.column = column
         self.operator = operator
         self.specification = specification
+        self.logical_op = logical_op
+        self.column2 = column2
+        self.operator2 = operator2
+        self.specification2 = specification2
+
+
 
     def get_column(self):
         return self.column
@@ -27,24 +34,32 @@ class Query:
 
 # some function for input validation using pyparsing
 # returns input in the form of a query
-# TODO add and/or
 def validate_input(input):
 
 
-    try:
-        category = pp.Word(pp.alphas)
-        operator = pp.one_of("= < >")
-        specification = pp.Word(pp.alphas)
+    category = pp.Word(pp.alphas)
+    operator = pp.one_of("= < > <= >= !=")
+    specification = pp.Word(pp.alphanums)
 
-        query_parse = category + operator + specification
+    logical_op = pp.Keyword("AND") | pp.Keyword("OR")
+
+    parsed_query = category + operator + specification
+    comp_query = parsed_query + logical_op + parsed_query
+    
+
+    # if and/or operator exists
+    try:
         # created parsed query
-        parsed = query_parse.parse_string(input)
+        parsed = comp_query.parse_string(input, parse_all=True)
+        newQuery = Query(parsed[0], parsed[1], parsed[2], parsed[3], parsed[4], parsed[5], parsed[6])
+
+    # else
+    except pp.ParseException:
+        # created parsed query
+        parsed = parsed_query.parse_string(input)
         newQuery = Query(parsed[0], parsed[1], parsed[2])
 
-        print(parsed)
-        return newQuery
-    except pp.exceptions.ParseException:
-        print("invalid")
+    return newQuery
 
 
 
