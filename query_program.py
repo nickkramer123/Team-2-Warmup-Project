@@ -36,9 +36,9 @@ class Query:
 # returns input in the form of a query
 def validate_input(input):
 
-    category = pp.Word(pp.alphas)
-    operator = pp.one_of("= < > <= >= !=")
-    specification = pp.Word(pp.alphanums)
+    category = pp.QuotedString('"')
+    operator = pp.one_of("= < > <= >= != of")
+    specification = pp.QuotedString('"')
 
     logical_op = pp.Keyword("AND") | pp.Keyword("OR")
 
