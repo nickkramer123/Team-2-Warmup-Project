@@ -4,954 +4,954 @@
     "movie_name":"The Godfather",
     "year_of_release":"1972",
     "category":"R",
-    "run_time":"175",
+    "run_time":175,
     "genre":[
       "Crime",
       "Drama"
     ],
     "imdb_rating":9.2,
-    "votes":"1860471",
-    "gross_total":"134.97"
+    "votes":1860471,
+    "gross_total":134.97
   },
   {
     "index":2.0,
     "movie_name":"The Silence of the Lambs",
     "year_of_release":"1991",
     "category":"R",
-    "run_time":"118",
+    "run_time":118,
     "genre":[
       "Crime",
       "Drama",
       "Thriller"
     ],
     "imdb_rating":8.6,
-    "votes":"1435344",
-    "gross_total":"130.74"
+    "votes":1435344,
+    "gross_total":130.74
   },
   {
     "index":3.0,
     "movie_name":"Star Wars Episode V The Empire Strikes Back",
     "year_of_release":"1980",
     "category":"PG",
-    "run_time":"124",
+    "run_time":124,
     "genre":[
       "Action",
       "Adventure",
       "Fantasy"
     ],
     "imdb_rating":8.7,
-    "votes":"1294805",
-    "gross_total":"290.48"
+    "votes":1294805,
+    "gross_total":290.48
   },
   {
     "index":4.0,
     "movie_name":"The Shawshank Redemption",
     "year_of_release":"1994",
     "category":"R",
-    "run_time":"142",
+    "run_time":142,
     "genre":[
       "Drama"
     ],
     "imdb_rating":9.3,
-    "votes":"2683302",
-    "gross_total":"28.34"
+    "votes":2683302,
+    "gross_total":28.34
   },
   {
     "index":5.0,
     "movie_name":"The Shining",
     "year_of_release":"1980",
     "category":"R",
-    "run_time":"146",
+    "run_time":146,
     "genre":[
       "Drama",
       "Horror"
     ],
     "imdb_rating":8.4,
-    "votes":"1025560",
-    "gross_total":"44.02"
+    "votes":1025560,
+    "gross_total":44.02
   },
   {
     "index":6.0,
     "movie_name":"Casablanca",
     "year_of_release":"1942",
     "category":"PG",
-    "run_time":"102",
+    "run_time":102,
     "genre":[
       "Drama",
       "Romance",
       "War"
     ],
     "imdb_rating":8.5,
-    "votes":"574092",
-    "gross_total":"1.02"
+    "votes":574092,
+    "gross_total":1.02
   },
   {
     "index":7.0,
     "movie_name":"One Flew Over the Cuckoo's Nest",
     "year_of_release":"1975",
     "category":"R",
-    "run_time":"133",
+    "run_time":133,
     "genre":[
       "Drama"
     ],
     "imdb_rating":8.7,
-    "votes":"1010102",
-    "gross_total":"112.00"
+    "votes":1010102,
+    "gross_total":112.0
   },
   {
     "index":8.0,
     "movie_name":"Indiana Jones and the Raiders of the Lost Ark",
     "year_of_release":"1981",
     "category":"PG",
-    "run_time":"115",
+    "run_time":115,
     "genre":[
       "Action",
       "Adventure"
     ],
     "imdb_rating":8.4,
-    "votes":"969143",
-    "gross_total":"248.16"
+    "votes":969143,
+    "gross_total":248.16
   },
   {
     "index":9.0,
     "movie_name":"The Lord of the Rings The Return of the King",
     "year_of_release":"2003",
     "category":"PG-13",
-    "run_time":"201",
+    "run_time":201,
     "genre":[
       "Action",
       "Adventure",
       "Drama"
     ],
     "imdb_rating":9.0,
-    "votes":"1849082",
-    "gross_total":"377.85"
+    "votes":1849082,
+    "gross_total":377.85
   },
   {
     "index":10.0,
     "movie_name":"Star Wars Episode IV A New Hope",
     "year_of_release":"1977",
     "category":"PG",
-    "run_time":"121",
+    "run_time":121,
     "genre":[
       "Action",
       "Adventure",
       "Fantasy"
     ],
     "imdb_rating":8.6,
-    "votes":"1367430",
-    "gross_total":"322.74"
+    "votes":1367430,
+    "gross_total":322.74
   },
   {
     "index":11.0,
     "movie_name":"The Dark Knight",
     "year_of_release":"2008",
     "category":"PG-13",
-    "run_time":"152",
+    "run_time":152,
     "genre":[
       "Action",
       "Crime",
       "Drama"
     ],
     "imdb_rating":9.0,
-    "votes":"2656768",
-    "gross_total":"534.86"
+    "votes":2656768,
+    "gross_total":534.86
   },
   {
     "index":12.0,
     "movie_name":"The Godfather Part II",
     "year_of_release":"1974",
     "category":"R",
-    "run_time":"202",
+    "run_time":202,
     "genre":[
       "Crime",
       "Drama"
     ],
     "imdb_rating":9.0,
-    "votes":"1273349",
-    "gross_total":"57.30"
+    "votes":1273349,
+    "gross_total":57.3
   },
   {
     "index":13.0,
     "movie_name":"Aliens",
     "year_of_release":"1986",
     "category":"R",
-    "run_time":"137",
+    "run_time":137,
     "genre":[
       "Action",
       "Adventure",
       "Sci-Fi"
     ],
     "imdb_rating":8.4,
-    "votes":"720623",
-    "gross_total":"85.16"
+    "votes":720623,
+    "gross_total":85.16
   },
   {
     "index":14.0,
     "movie_name":"Schindler's List",
     "year_of_release":"1993",
     "category":"R",
-    "run_time":"195",
+    "run_time":195,
     "genre":[
       "Biography",
       "Drama",
       "History"
     ],
     "imdb_rating":9.0,
-    "votes":"1357621",
-    "gross_total":"96.90"
+    "votes":1357621,
+    "gross_total":96.9
   },
   {
     "index":15.0,
     "movie_name":"Inception",
     "year_of_release":"2010",
     "category":"PG-13",
-    "run_time":"148",
+    "run_time":148,
     "genre":[
       "Action",
       "Adventure",
       "Sci-Fi"
     ],
     "imdb_rating":8.8,
-    "votes":"2356293",
-    "gross_total":"292.58"
+    "votes":2356293,
+    "gross_total":292.58
   },
   {
     "index":16.0,
     "movie_name":"The Lord of the Rings The Fellowship of the Ring",
     "year_of_release":"2001",
     "category":"PG-13",
-    "run_time":"178",
+    "run_time":178,
     "genre":[
       "Action",
       "Adventure",
       "Drama"
     ],
     "imdb_rating":8.8,
-    "votes":"1878557",
-    "gross_total":"315.54"
+    "votes":1878557,
+    "gross_total":315.54
   },
   {
     "index":17.0,
     "movie_name":"Alien",
     "year_of_release":"1979",
     "category":"R",
-    "run_time":"117",
+    "run_time":117,
     "genre":[
       "Horror",
       "Sci-Fi"
     ],
     "imdb_rating":8.5,
-    "votes":"885635",
-    "gross_total":"78.90"
+    "votes":885635,
+    "gross_total":78.9
   },
   {
     "index":18.0,
     "movie_name":"Some Like It Hot",
     "year_of_release":"1959",
     "category":"Passed",
-    "run_time":"121",
+    "run_time":121,
     "genre":[
       "Comedy",
       "Music",
       "Romance"
     ],
     "imdb_rating":8.2,
-    "votes":"269346",
-    "gross_total":"25.00"
+    "votes":269346,
+    "gross_total":25.0
   },
   {
     "index":19.0,
     "movie_name":"Blade Runner",
     "year_of_release":"1982",
     "category":"R",
-    "run_time":"117",
+    "run_time":117,
     "genre":[
       "Action",
       "Drama",
       "Sci-Fi"
     ],
     "imdb_rating":8.1,
-    "votes":"773425",
-    "gross_total":"32.87"
+    "votes":773425,
+    "gross_total":32.87
   },
   {
     "index":20.0,
     "movie_name":"Se7en",
     "year_of_release":"1995",
     "category":"R",
-    "run_time":"127",
+    "run_time":127,
     "genre":[
       "Crime",
       "Drama",
       "Mystery"
     ],
     "imdb_rating":8.6,
-    "votes":"1655745",
-    "gross_total":"100.13"
+    "votes":1655745,
+    "gross_total":100.13
   },
   {
     "index":21.0,
     "movie_name":"Apocalypse Now",
     "year_of_release":"1979",
     "category":"R",
-    "run_time":"147",
+    "run_time":147,
     "genre":[
       "Drama",
       "Mystery",
       "War"
     ],
     "imdb_rating":8.5,
-    "votes":"669994",
-    "gross_total":"83.47"
+    "votes":669994,
+    "gross_total":83.47
   },
   {
     "index":22.0,
     "movie_name":"12 Angry Men",
     "year_of_release":"1957",
     "category":"Approved",
-    "run_time":"96",
+    "run_time":96,
     "genre":[
       "Crime",
       "Drama"
     ],
     "imdb_rating":9.0,
-    "votes":"792729",
-    "gross_total":"4.36"
+    "votes":792729,
+    "gross_total":4.36
   },
   {
     "index":23.0,
     "movie_name":"The Lord of the Rings The Two Towers",
     "year_of_release":"2002",
     "category":"PG-13",
-    "run_time":"179",
+    "run_time":179,
     "genre":[
       "Action",
       "Adventure",
       "Drama"
     ],
     "imdb_rating":8.8,
-    "votes":"1669715",
-    "gross_total":"342.55"
+    "votes":1669715,
+    "gross_total":342.55
   },
   {
     "index":24.0,
     "movie_name":"Terminator 2 Judgment Day",
     "year_of_release":"1991",
     "category":"R",
-    "run_time":"137",
+    "run_time":137,
     "genre":[
       "Action",
       "Sci-Fi"
     ],
     "imdb_rating":8.6,
-    "votes":"1101850",
-    "gross_total":"204.84"
+    "votes":1101850,
+    "gross_total":204.84
   },
   {
     "index":25.0,
     "movie_name":"Star Wars Episode VI Return of the Jedi",
     "year_of_release":"1983",
     "category":"PG",
-    "run_time":"131",
+    "run_time":131,
     "genre":[
       "Action",
       "Adventure",
       "Fantasy"
     ],
     "imdb_rating":8.3,
-    "votes":"1056750",
-    "gross_total":"309.13"
+    "votes":1056750,
+    "gross_total":309.13
   },
   {
     "index":26.0,
     "movie_name":"Die Hard",
     "year_of_release":"1988",
     "category":"R",
-    "run_time":"132",
+    "run_time":132,
     "genre":[
       "Action",
       "Thriller"
     ],
     "imdb_rating":8.2,
-    "votes":"887967",
-    "gross_total":"83.01"
+    "votes":887967,
+    "gross_total":83.01
   },
   {
     "index":27.0,
     "movie_name":"Gone with the Wind",
     "year_of_release":"1939",
     "category":"Passed",
-    "run_time":"238",
+    "run_time":238,
     "genre":[
       "Drama",
       "Romance",
       "War"
     ],
     "imdb_rating":8.2,
-    "votes":"317621",
-    "gross_total":"198.68"
+    "votes":317621,
+    "gross_total":198.68
   },
   {
     "index":28.0,
     "movie_name":"Taxi Driver",
     "year_of_release":"1976",
     "category":"R",
-    "run_time":"114",
+    "run_time":114,
     "genre":[
       "Crime",
       "Drama"
     ],
     "imdb_rating":8.2,
-    "votes":"836871",
-    "gross_total":"28.26"
+    "votes":836871,
+    "gross_total":28.26
   },
   {
     "index":29.0,
     "movie_name":"Pulp Fiction",
     "year_of_release":"1994",
     "category":"R",
-    "run_time":"154",
+    "run_time":154,
     "genre":[
       "Crime",
       "Drama"
     ],
     "imdb_rating":8.9,
-    "votes":"2058574",
-    "gross_total":"107.93"
+    "votes":2058574,
+    "gross_total":107.93
   },
   {
     "index":30.0,
     "movie_name":"The Bridge on the River Kwai",
     "year_of_release":"1957",
     "category":"PG",
-    "run_time":"161",
+    "run_time":161,
     "genre":[
       "Adventure",
       "Drama",
       "War"
     ],
     "imdb_rating":8.2,
-    "votes":"222540",
-    "gross_total":"44.91"
+    "votes":222540,
+    "gross_total":44.91
   },
   {
     "index":31.0,
     "movie_name":"The Lion King",
     "year_of_release":"1994",
     "category":"G",
-    "run_time":"88",
+    "run_time":88,
     "genre":[
       "Animation",
       "Adventure",
       "Drama"
     ],
     "imdb_rating":8.5,
-    "votes":"1060900",
-    "gross_total":"422.78"
+    "votes":1060900,
+    "gross_total":422.78
   },
   {
     "index":32.0,
     "movie_name":"North by Northwest",
     "year_of_release":"1959",
     "category":"Approved",
-    "run_time":"136",
+    "run_time":136,
     "genre":[
       "Action",
       "Adventure",
       "Mystery"
     ],
     "imdb_rating":8.3,
-    "votes":"330232",
-    "gross_total":"13.28"
+    "votes":330232,
+    "gross_total":13.28
   },
   {
     "index":33.0,
     "movie_name":"Rear Window",
     "year_of_release":"1954",
     "category":"PG",
-    "run_time":"112",
+    "run_time":112,
     "genre":[
       "Mystery",
       "Thriller"
     ],
     "imdb_rating":8.5,
-    "votes":"493926",
-    "gross_total":"36.76"
+    "votes":493926,
+    "gross_total":36.76
   },
   {
     "index":34.0,
     "movie_name":"Leon The Professional",
     "year_of_release":"1994",
     "category":"R",
-    "run_time":"110",
+    "run_time":110,
     "genre":[
       "Action",
       "Crime",
       "Drama"
     ],
     "imdb_rating":8.5,
-    "votes":"1164087",
-    "gross_total":"19.50"
+    "votes":1164087,
+    "gross_total":19.5
   },
   {
     "index":35.0,
     "movie_name":"Back to the Future",
     "year_of_release":"1985",
     "category":"PG",
-    "run_time":"116",
+    "run_time":116,
     "genre":[
       "Adventure",
       "Comedy",
       "Sci-Fi"
     ],
     "imdb_rating":8.5,
-    "votes":"1208582",
-    "gross_total":"210.61"
+    "votes":1208582,
+    "gross_total":210.61
   },
   {
     "index":36.0,
     "movie_name":"Citizen Kane",
     "year_of_release":"1941",
     "category":"PG",
-    "run_time":"119",
+    "run_time":119,
     "genre":[
       "Drama",
       "Mystery"
     ],
     "imdb_rating":8.3,
-    "votes":"444359",
-    "gross_total":"1.59"
+    "votes":444359,
+    "gross_total":1.59
   },
   {
     "index":37.0,
     "movie_name":"Goodfellas",
     "year_of_release":"1990",
     "category":"R",
-    "run_time":"145",
+    "run_time":145,
     "genre":[
       "Biography",
       "Crime",
       "Drama"
     ],
     "imdb_rating":8.7,
-    "votes":"1164128",
-    "gross_total":"46.84"
+    "votes":1164128,
+    "gross_total":46.84
   },
   {
     "index":38.0,
     "movie_name":"Memento",
     "year_of_release":"2000",
     "category":"R",
-    "run_time":"113",
+    "run_time":113,
     "genre":[
       "Mystery",
       "Thriller"
     ],
     "imdb_rating":8.4,
-    "votes":"1241252",
-    "gross_total":"25.54"
+    "votes":1241252,
+    "gross_total":25.54
   },
   {
     "index":39.0,
     "movie_name":"American Beauty",
     "year_of_release":"1999",
     "category":"R",
-    "run_time":"122",
+    "run_time":122,
     "genre":[
       "Drama"
     ],
     "imdb_rating":8.4,
-    "votes":"1157536",
-    "gross_total":"130.10"
+    "votes":1157536,
+    "gross_total":130.1
   },
   {
     "index":40.0,
     "movie_name":"As Good as It Gets",
     "year_of_release":"1997",
     "category":"PG-13",
-    "run_time":"139",
+    "run_time":139,
     "genre":[
       "Comedy",
       "Drama",
       "Romance"
     ],
     "imdb_rating":7.7,
-    "votes":"301756",
-    "gross_total":"148.48"
+    "votes":301756,
+    "gross_total":148.48
   },
   {
     "index":41.0,
     "movie_name":"Forrest Gump",
     "year_of_release":"1994",
     "category":"PG-13",
-    "run_time":"142",
+    "run_time":142,
     "genre":[
       "Drama",
       "Romance"
     ],
     "imdb_rating":8.8,
-    "votes":"2082477",
-    "gross_total":"330.25"
+    "votes":2082477,
+    "gross_total":330.25
   },
   {
     "index":42.0,
     "movie_name":"Singin' in the Rain",
     "year_of_release":"1952",
     "category":"G",
-    "run_time":"103",
+    "run_time":103,
     "genre":[
       "Comedy",
       "Musical",
       "Romance"
     ],
     "imdb_rating":8.3,
-    "votes":"244548",
-    "gross_total":"8.82"
+    "votes":244548,
+    "gross_total":8.82
   },
   {
     "index":43.0,
     "movie_name":"Braveheart",
     "year_of_release":"1995",
     "category":"R",
-    "run_time":"178",
+    "run_time":178,
     "genre":[
       "Biography",
       "Drama",
       "History"
     ],
     "imdb_rating":8.4,
-    "votes":"1040416",
-    "gross_total":"75.60"
+    "votes":1040416,
+    "gross_total":75.6
   },
   {
     "index":44.0,
     "movie_name":"Saving Private Ryan",
     "year_of_release":"1998",
     "category":"R",
-    "run_time":"169",
+    "run_time":169,
     "genre":[
       "Drama",
       "War"
     ],
     "imdb_rating":8.6,
-    "votes":"1394262",
-    "gross_total":"216.54"
+    "votes":1394262,
+    "gross_total":216.54
   },
   {
     "index":45.0,
     "movie_name":"Rain Man",
     "year_of_release":"1988",
     "category":"R",
-    "run_time":"133",
+    "run_time":133,
     "genre":[
       "Drama"
     ],
     "imdb_rating":8.0,
-    "votes":"517528",
-    "gross_total":"178.80"
+    "votes":517528,
+    "gross_total":178.8
   },
   {
     "index":46.0,
     "movie_name":"The King's Speech",
     "year_of_release":"2010",
     "category":"R",
-    "run_time":"118",
+    "run_time":118,
     "genre":[
       "Biography",
       "Drama",
       "History"
     ],
     "imdb_rating":8.0,
-    "votes":"683379",
-    "gross_total":"138.80"
+    "votes":683379,
+    "gross_total":138.8
   },
   {
     "index":47.0,
     "movie_name":"2001 A Space Odyssey",
     "year_of_release":"1968",
     "category":"G",
-    "run_time":"149",
+    "run_time":149,
     "genre":[
       "Adventure",
       "Sci-Fi"
     ],
     "imdb_rating":8.3,
-    "votes":"671980",
-    "gross_total":"56.95"
+    "votes":671980,
+    "gross_total":56.95
   },
   {
     "index":48.0,
     "movie_name":"Kill Bill Vol 1",
     "year_of_release":"2003",
     "category":"R",
-    "run_time":"111",
+    "run_time":111,
     "genre":[
       "Action",
       "Crime",
       "Drama"
     ],
     "imdb_rating":8.2,
-    "votes":"1119120",
-    "gross_total":"70.10"
+    "votes":1119120,
+    "gross_total":70.1
   },
   {
     "index":49.0,
     "movie_name":"Avanti!",
     "year_of_release":"1972",
     "category":"R",
-    "run_time":"144",
+    "run_time":144,
     "genre":[
       "Comedy",
       "Romance"
     ],
     "imdb_rating":7.2,
-    "votes":"10748",
-    "gross_total":"3.30"
+    "votes":10748,
+    "gross_total":3.3
   },
   {
     "index":50.0,
     "movie_name":"The Good the Bad and the Ugly",
     "year_of_release":"1966",
     "category":"Approved",
-    "run_time":"178",
+    "run_time":178,
     "genre":[
       "Adventure",
       "Western"
     ],
     "imdb_rating":8.8,
-    "votes":"763678",
-    "gross_total":"6.10"
+    "votes":763678,
+    "gross_total":6.1
   },
   {
     "index":51.0,
     "movie_name":"Amelie",
     "year_of_release":"2001",
     "category":"R",
-    "run_time":"122",
+    "run_time":122,
     "genre":[
       "Comedy",
       "Romance"
     ],
     "imdb_rating":8.3,
-    "votes":"759411",
-    "gross_total":"33.23"
+    "votes":759411,
+    "gross_total":33.23
   },
   {
     "index":52.0,
     "movie_name":"Modern Times",
     "year_of_release":"1936",
     "category":"G",
-    "run_time":"87",
+    "run_time":87,
     "genre":[
       "Comedy",
       "Drama",
       "Romance"
     ],
     "imdb_rating":8.5,
-    "votes":"244162",
-    "gross_total":"0.16"
+    "votes":244162,
+    "gross_total":0.16
   },
   {
     "index":53.0,
     "movie_name":"Lost in Translation",
     "year_of_release":"2003",
     "category":"R",
-    "run_time":"102",
+    "run_time":102,
     "genre":[
       "Comedy",
       "Drama"
     ],
     "imdb_rating":7.7,
-    "votes":"458613",
-    "gross_total":"44.59"
+    "votes":458613,
+    "gross_total":44.59
   },
   {
     "index":54.0,
     "movie_name":"Full Metal Jacket",
     "year_of_release":"1987",
     "category":"R",
-    "run_time":"116",
+    "run_time":116,
     "genre":[
       "Drama",
       "War"
     ],
     "imdb_rating":8.3,
-    "votes":"745546",
-    "gross_total":"46.36"
+    "votes":745546,
+    "gross_total":46.36
   },
   {
     "index":55.0,
     "movie_name":"Requiem for a Dream",
     "year_of_release":"2000",
     "category":"R",
-    "run_time":"102",
+    "run_time":102,
     "genre":[
       "Drama"
     ],
     "imdb_rating":8.3,
-    "votes":"845362",
-    "gross_total":"3.64"
+    "votes":845362,
+    "gross_total":3.64
   },
   {
     "index":56.0,
     "movie_name":"Fight Club",
     "year_of_release":"1999",
     "category":"R",
-    "run_time":"139",
+    "run_time":139,
     "genre":[
       "Drama"
     ],
     "imdb_rating":8.8,
-    "votes":"2128902",
-    "gross_total":"37.03"
+    "votes":2128902,
+    "gross_total":37.03
   },
   {
     "index":57.0,
     "movie_name":"No Country for Old Men",
     "year_of_release":"2007",
     "category":"R",
-    "run_time":"122",
+    "run_time":122,
     "genre":[
       "Crime",
       "Drama",
       "Thriller"
     ],
     "imdb_rating":8.2,
-    "votes":"977336",
-    "gross_total":"74.28"
+    "votes":977336,
+    "gross_total":74.28
   },
   {
     "index":58.0,
     "movie_name":"Django Unchained",
     "year_of_release":"2012",
     "category":"R",
-    "run_time":"165",
+    "run_time":165,
     "genre":[
       "Drama",
       "Western"
     ],
     "imdb_rating":8.4,
-    "votes":"1557890",
-    "gross_total":"162.81"
+    "votes":1557890,
+    "gross_total":162.81
   },
   {
     "index":59.0,
     "movie_name":"Children of Men",
     "year_of_release":"2006",
     "category":"R",
-    "run_time":"109",
+    "run_time":109,
     "genre":[
       "Action",
       "Drama",
       "Sci-Fi"
     ],
     "imdb_rating":7.9,
-    "votes":"503642",
-    "gross_total":"35.55"
+    "votes":503642,
+    "gross_total":35.55
   },
   {
     "index":60.0,
     "movie_name":"Ratatouille",
     "year_of_release":"2007",
     "category":"G",
-    "run_time":"111",
+    "run_time":111,
     "genre":[
       "Animation",
       "Adventure",
       "Comedy"
     ],
     "imdb_rating":8.1,
-    "votes":"741322",
-    "gross_total":"206.45"
+    "votes":741322,
+    "gross_total":206.45
   },
   {
     "index":61.0,
     "movie_name":"The Lives of Others",
     "year_of_release":"2006",
     "category":"R",
-    "run_time":"137",
+    "run_time":137,
     "genre":[
       "Drama",
       "Mystery",
       "Thriller"
     ],
     "imdb_rating":8.4,
-    "votes":"391480",
-    "gross_total":"11.29"
+    "votes":391480,
+    "gross_total":11.29
   },
   {
     "index":62.0,
     "movie_name":"The Prestige",
     "year_of_release":"2006",
     "category":"PG-13",
-    "run_time":"130",
+    "run_time":130,
     "genre":[
       "Drama",
       "Mystery",
       "Sci-Fi"
     ],
     "imdb_rating":8.5,
-    "votes":"1336235",
-    "gross_total":"53.09"
+    "votes":1336235,
+    "gross_total":53.09
   },
   {
     "index":63.0,
     "movie_name":"V for Vendetta",
     "year_of_release":"2005",
     "category":"R",
-    "run_time":"132",
+    "run_time":132,
     "genre":[
       "Action",
       "Drama",
       "Sci-Fi"
     ],
     "imdb_rating":8.2,
-    "votes":"1125038",
-    "gross_total":"70.51"
+    "votes":1125038,
+    "gross_total":70.51
   },
   {
     "index":64.0,
     "movie_name":"Chinatown",
     "year_of_release":"1974",
     "category":"R",
-    "run_time":"130",
+    "run_time":130,
     "genre":[
       "Drama",
       "Mystery",
       "Thriller"
     ],
     "imdb_rating":8.2,
-    "votes":"329110",
-    "gross_total":"8.49"
+    "votes":329110,
+    "gross_total":8.49
   },
   {
     "index":65.0,
     "movie_name":"City of God",
     "year_of_release":"2002",
     "category":"R",
-    "run_time":"130",
+    "run_time":130,
     "genre":[
       "Crime",
       "Drama"
     ],
     "imdb_rating":8.6,
-    "votes":"758914",
-    "gross_total":"7.56"
+    "votes":758914,
+    "gross_total":7.56
   },
   {
     "index":66.0,
     "movie_name":"To Have and Have Not",
     "year_of_release":"1944",
     "category":"Passed",
-    "run_time":"100",
+    "run_time":100,
     "genre":[
       "Adventure",
       "Comedy",
       "Film-Noir"
     ],
     "imdb_rating":7.8,
-    "votes":"35528",
+    "votes":35528,
     "gross_total":null
   },
   {
@@ -959,483 +959,483 @@
     "movie_name":"Fargo",
     "year_of_release":"1996",
     "category":"R",
-    "run_time":"98",
+    "run_time":98,
     "genre":[
       "Crime",
       "Thriller"
     ],
     "imdb_rating":8.1,
-    "votes":"681256",
-    "gross_total":"24.61"
+    "votes":681256,
+    "gross_total":24.61
   },
   {
     "index":68.0,
     "movie_name":"Life of Pi",
     "year_of_release":"2012",
     "category":"PG",
-    "run_time":"127",
+    "run_time":127,
     "genre":[
       "Adventure",
       "Drama",
       "Fantasy"
     ],
     "imdb_rating":7.9,
-    "votes":"634357",
-    "gross_total":"124.99"
+    "votes":634357,
+    "gross_total":124.99
   },
   {
     "index":69.0,
     "movie_name":"Slumdog Millionaire",
     "year_of_release":"2008",
     "category":"R",
-    "run_time":"120",
+    "run_time":120,
     "genre":[
       "Crime",
       "Drama",
       "Romance"
     ],
     "imdb_rating":8.0,
-    "votes":"848344",
-    "gross_total":"141.32"
+    "votes":848344,
+    "gross_total":141.32
   },
   {
     "index":70.0,
     "movie_name":"Vertigo",
     "year_of_release":"1958",
     "category":"PG",
-    "run_time":"128",
+    "run_time":128,
     "genre":[
       "Mystery",
       "Romance",
       "Thriller"
     ],
     "imdb_rating":8.3,
-    "votes":"404626",
-    "gross_total":"3.20"
+    "votes":404626,
+    "gross_total":3.2
   },
   {
     "index":71.0,
     "movie_name":"Trainspotting",
     "year_of_release":"1996",
     "category":"R",
-    "run_time":"93",
+    "run_time":93,
     "genre":[
       "Drama"
     ],
     "imdb_rating":8.1,
-    "votes":"690138",
-    "gross_total":"16.50"
+    "votes":690138,
+    "gross_total":16.5
   },
   {
     "index":72.0,
     "movie_name":"Interstellar",
     "year_of_release":"2014",
     "category":"PG-13",
-    "run_time":"169",
+    "run_time":169,
     "genre":[
       "Adventure",
       "Drama",
       "Sci-Fi"
     ],
     "imdb_rating":8.6,
-    "votes":"1835790",
-    "gross_total":"188.02"
+    "votes":1835790,
+    "gross_total":188.02
   },
   {
     "index":73.0,
     "movie_name":"The Thing",
     "year_of_release":"1982",
     "category":"R",
-    "run_time":"109",
+    "run_time":109,
     "genre":[
       "Horror",
       "Mystery",
       "Sci-Fi"
     ],
     "imdb_rating":8.2,
-    "votes":"428474",
-    "gross_total":"13.78"
+    "votes":428474,
+    "gross_total":13.78
   },
   {
     "index":74.0,
     "movie_name":"The Third Man",
     "year_of_release":"1949",
     "category":"Approved",
-    "run_time":"93",
+    "run_time":93,
     "genre":[
       "Film-Noir",
       "Mystery",
       "Thriller"
     ],
     "imdb_rating":8.1,
-    "votes":"173206",
-    "gross_total":"0.45"
+    "votes":173206,
+    "gross_total":0.45
   },
   {
     "index":75.0,
     "movie_name":"12 Monkeys",
     "year_of_release":"1995",
     "category":"R",
-    "run_time":"129",
+    "run_time":129,
     "genre":[
       "Mystery",
       "Sci-Fi",
       "Thriller"
     ],
     "imdb_rating":8.0,
-    "votes":"621205",
-    "gross_total":"57.14"
+    "votes":621205,
+    "gross_total":57.14
   },
   {
     "index":76.0,
     "movie_name":"Life Is Beautiful",
     "year_of_release":"1997",
     "category":"PG-13",
-    "run_time":"116",
+    "run_time":116,
     "genre":[
       "Comedy",
       "Drama",
       "Romance"
     ],
     "imdb_rating":8.6,
-    "votes":"697226",
-    "gross_total":"57.60"
+    "votes":697226,
+    "gross_total":57.6
   },
   {
     "index":77.0,
     "movie_name":"The Pianist",
     "year_of_release":"2002",
     "category":"R",
-    "run_time":"150",
+    "run_time":150,
     "genre":[
       "Biography",
       "Drama",
       "Music"
     ],
     "imdb_rating":8.5,
-    "votes":"834842",
-    "gross_total":"32.57"
+    "votes":834842,
+    "gross_total":32.57
   },
   {
     "index":78.0,
     "movie_name":"Magnolia",
     "year_of_release":"1999",
     "category":"R",
-    "run_time":"188",
+    "run_time":188,
     "genre":[
       "Drama"
     ],
     "imdb_rating":8.0,
-    "votes":"315037",
-    "gross_total":"22.46"
+    "votes":315037,
+    "gross_total":22.46
   },
   {
     "index":79.0,
     "movie_name":"The Dark Knight Rises",
     "year_of_release":"2012",
     "category":"PG-13",
-    "run_time":"164",
+    "run_time":164,
     "genre":[
       "Action",
       "Drama"
     ],
     "imdb_rating":8.4,
-    "votes":"1708002",
-    "gross_total":"448.14"
+    "votes":1708002,
+    "gross_total":448.14
   },
   {
     "index":80.0,
     "movie_name":"Star Wars Episode VII The Force Awakens",
     "year_of_release":"2015",
     "category":"PG-13",
-    "run_time":"138",
+    "run_time":138,
     "genre":[
       "Action",
       "Adventure",
       "Sci-Fi"
     ],
     "imdb_rating":7.8,
-    "votes":"933771",
-    "gross_total":"936.66"
+    "votes":933771,
+    "gross_total":936.66
   },
   {
     "index":81.0,
     "movie_name":"The Hobbit The Desolation of Smaug",
     "year_of_release":"2013",
     "category":"PG-13",
-    "run_time":"161",
+    "run_time":161,
     "genre":[
       "Adventure",
       "Fantasy"
     ],
     "imdb_rating":7.8,
-    "votes":"667864",
-    "gross_total":"258.37"
+    "votes":667864,
+    "gross_total":258.37
   },
   {
     "index":82.0,
     "movie_name":"Mad Max Fury Road",
     "year_of_release":"2015",
     "category":"R",
-    "run_time":"120",
+    "run_time":120,
     "genre":[
       "Action",
       "Adventure",
       "Sci-Fi"
     ],
     "imdb_rating":8.1,
-    "votes":"1006158",
-    "gross_total":"154.06"
+    "votes":1006158,
+    "gross_total":154.06
   },
   {
     "index":83.0,
     "movie_name":"12 Years a Slave",
     "year_of_release":"2013",
     "category":"R",
-    "run_time":"134",
+    "run_time":134,
     "genre":[
       "Biography",
       "Drama",
       "History"
     ],
     "imdb_rating":8.1,
-    "votes":"703824",
-    "gross_total":"56.67"
+    "votes":703824,
+    "gross_total":56.67
   },
   {
     "index":84.0,
     "movie_name":"Indiana Jones and the Last Crusade",
     "year_of_release":"1989",
     "category":"PG-13",
-    "run_time":"127",
+    "run_time":127,
     "genre":[
       "Action",
       "Adventure"
     ],
     "imdb_rating":8.2,
-    "votes":"758057",
-    "gross_total":"197.17"
+    "votes":758057,
+    "gross_total":197.17
   },
   {
     "index":85.0,
     "movie_name":"O Brother Where Art Thou?",
     "year_of_release":"2000",
     "category":"PG-13",
-    "run_time":"107",
+    "run_time":107,
     "genre":[
       "Adventure",
       "Comedy",
       "Crime"
     ],
     "imdb_rating":7.7,
-    "votes":"315173",
-    "gross_total":"45.51"
+    "votes":315173,
+    "gross_total":45.51
   },
   {
     "index":86.0,
     "movie_name":"Inglourious Basterds",
     "year_of_release":"2009",
     "category":"R",
-    "run_time":"153",
+    "run_time":153,
     "genre":[
       "Adventure",
       "Drama",
       "War"
     ],
     "imdb_rating":8.3,
-    "votes":"1453288",
-    "gross_total":"120.54"
+    "votes":1453288,
+    "gross_total":120.54
   },
   {
     "index":87.0,
     "movie_name":"The Departed",
     "year_of_release":"2006",
     "category":"R",
-    "run_time":"151",
+    "run_time":151,
     "genre":[
       "Crime",
       "Drama",
       "Thriller"
     ],
     "imdb_rating":8.5,
-    "votes":"1328252",
-    "gross_total":"132.38"
+    "votes":1328252,
+    "gross_total":132.38
   },
   {
     "index":88.0,
     "movie_name":"A Beautiful Mind",
     "year_of_release":"2001",
     "category":"PG-13",
-    "run_time":"135",
+    "run_time":135,
     "genre":[
       "Biography",
       "Drama"
     ],
     "imdb_rating":8.2,
-    "votes":"935549",
-    "gross_total":"170.74"
+    "votes":935549,
+    "gross_total":170.74
   },
   {
     "index":89.0,
     "movie_name":"District 9",
     "year_of_release":"2009",
     "category":"R",
-    "run_time":"112",
+    "run_time":112,
     "genre":[
       "Action",
       "Sci-Fi",
       "Thriller"
     ],
     "imdb_rating":7.9,
-    "votes":"685403",
-    "gross_total":"115.65"
+    "votes":685403,
+    "gross_total":115.65
   },
   {
     "index":90.0,
     "movie_name":"The Piano",
     "year_of_release":"1993",
     "category":"R",
-    "run_time":"121",
+    "run_time":121,
     "genre":[
       "Drama",
       "Music",
       "Romance"
     ],
     "imdb_rating":7.5,
-    "votes":"89819",
-    "gross_total":"40.16"
+    "votes":89819,
+    "gross_total":40.16
   },
   {
     "index":91.0,
     "movie_name":"Mystic River",
     "year_of_release":"2003",
     "category":"R",
-    "run_time":"138",
+    "run_time":138,
     "genre":[
       "Crime",
       "Drama",
       "Mystery"
     ],
     "imdb_rating":7.9,
-    "votes":"459918",
-    "gross_total":"90.14"
+    "votes":459918,
+    "gross_total":90.14
   },
   {
     "index":92.0,
     "movie_name":"The Insider",
     "year_of_release":"1999",
     "category":"R",
-    "run_time":"157",
+    "run_time":157,
     "genre":[
       "Biography",
       "Drama",
       "Thriller"
     ],
     "imdb_rating":7.8,
-    "votes":"172759",
-    "gross_total":"28.97"
+    "votes":172759,
+    "gross_total":28.97
   },
   {
     "index":93.0,
     "movie_name":"LA Confidential",
     "year_of_release":"1997",
     "category":"R",
-    "run_time":"138",
+    "run_time":138,
     "genre":[
       "Crime",
       "Drama",
       "Mystery"
     ],
     "imdb_rating":8.2,
-    "votes":"585555",
-    "gross_total":"64.62"
+    "votes":585555,
+    "gross_total":64.62
   },
   {
     "index":94.0,
     "movie_name":"Heat",
     "year_of_release":"1995",
     "category":"R",
-    "run_time":"170",
+    "run_time":170,
     "genre":[
       "Action",
       "Crime",
       "Drama"
     ],
     "imdb_rating":8.3,
-    "votes":"658033",
-    "gross_total":"67.44"
+    "votes":658033,
+    "gross_total":67.44
   },
   {
     "index":95.0,
     "movie_name":"The Usual Suspects",
     "year_of_release":"1995",
     "category":"R",
-    "run_time":"106",
+    "run_time":106,
     "genre":[
       "Crime",
       "Drama",
       "Mystery"
     ],
     "imdb_rating":8.5,
-    "votes":"1087832",
-    "gross_total":"23.34"
+    "votes":1087832,
+    "gross_total":23.34
   },
   {
     "index":96.0,
     "movie_name":"Cool Hand Luke",
     "year_of_release":"1967",
     "category":"GP",
-    "run_time":"127",
+    "run_time":127,
     "genre":[
       "Crime",
       "Drama"
     ],
     "imdb_rating":8.1,
-    "votes":"178888",
-    "gross_total":"16.22"
+    "votes":178888,
+    "gross_total":16.22
   },
   {
     "index":97.0,
     "movie_name":"Eternal Sunshine of the Spotless Mind",
     "year_of_release":"2004",
     "category":"R",
-    "run_time":"108",
+    "run_time":108,
     "genre":[
       "Drama",
       "Romance",
       "Sci-Fi"
     ],
     "imdb_rating":8.3,
-    "votes":"1011004",
-    "gross_total":"34.40"
+    "votes":1011004,
+    "gross_total":34.4
   },
   {
     "index":98.0,
     "movie_name":"City Lights",
     "year_of_release":"1931",
     "category":"G",
-    "run_time":"87",
+    "run_time":87,
     "genre":[
       "Comedy",
       "Drama",
       "Romance"
     ],
     "imdb_rating":8.5,
-    "votes":"186059",
-    "gross_total":"0.02"
+    "votes":186059,
+    "gross_total":0.02
   },
   {
     "index":99.0,
     "movie_name":"The Matrix",
     "year_of_release":"1999",
     "category":"R",
-    "run_time":"136",
+    "run_time":136,
     "genre":[
       "Action",
       "Sci-Fi"
     ],
     "imdb_rating":8.7,
-    "votes":"1916083",
-    "gross_total":"171.48"
+    "votes":1916083,
+    "gross_total":171.48
   }
 ]
