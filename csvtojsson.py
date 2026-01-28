@@ -1,6 +1,4 @@
-import os
 import pandas as pd
-print(os.getcwd())
 df = pd.read_csv("../movies.csv")
 df["year_of_release"] = df["year_of_release"].str.replace("(", "")
 df["year_of_release"] = df["year_of_release"].str.replace(")", "")
