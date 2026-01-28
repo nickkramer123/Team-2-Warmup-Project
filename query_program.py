@@ -156,4 +156,4 @@ while programOn == True:
         newQuery = validate_input(queryText)
         # if query is valid, run it
         if newQuery.valid == True:
-            make_query(newQuery)
+            finalQuery = make_query(newQuery)
