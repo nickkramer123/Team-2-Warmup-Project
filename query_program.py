@@ -74,14 +74,14 @@ def make_query(query):
     movies_ref = db.collection("movies")
 
     # and queries
-    if query.logical_op == "OR":
+    if query.logical_op == "AND":
 
-        movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).where(
+        finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).where(
         filter=FieldFilter(query.column2, query.operator2, query.specification2)
     )
     # or 
     if query.logical_op == "OR":
-        movies_ref.where(
+        finishedQuery = movies_ref.where(
             filter=Or(
                 [
                     FieldFilter(query.column, query.operator, query.specification),
@@ -91,8 +91,8 @@ def make_query(query):
         )
     # simple queries
     else:
-        movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification))
-    
+        finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification))
+    return finishedQuery
     
 
 
@@ -115,7 +115,7 @@ while programOn == True:
         print("Initial command: category")
         print("Ex. Genre, Year of Release, Category")
         print("Initial command: operator")
-        print("Ex. =, <, >")
+        print("Ex. =, <, >, in")
         print("Initial command: specification")
         print("Example query: Genre = Drama")
         print("input EXIT to end the program")
