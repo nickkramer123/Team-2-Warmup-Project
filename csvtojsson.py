@@ -1,5 +1,7 @@
+import os
 import pandas as pd
-df = pd.read_csv("movies.csv")
+print(os.getcwd())
+df = pd.read_csv("../movies.csv")
 df["year_of_release"] = df["year_of_release"].str.replace("(", "")
 df["year_of_release"] = df["year_of_release"].str.replace(")", "")
 df["run_time"] = df["run_time"].str.replace(" min", "")
@@ -11,4 +13,8 @@ df["movie_name"] = df["movie_name"].str.replace("- ", "")
 df["movie_name"] = df["movie_name"].str.replace(".", "")
 df["movie_name"] = df["movie_name"].str.replace(",", "")
 df["genre"] = df["genre"].str.split(", ")
+df["run_time"] = df["run_time"].astype(int)
+df["imdb_rating"] = df["imdb_rating"].astype(int)
+df["votes"] = df["votes"].astype(int)
+df["gross_total"] = df["gross_total"].astype(int)
 df.to_json("movies.json", orient="records", indent=2)
