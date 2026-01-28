@@ -2,7 +2,8 @@ import pandas as pd
 from pathlib import Path 
 CSV_PATH = Path(__file__).parent / "movies.csv"
 df = pd.read_csv(CSV_PATH)
-df["year_of_release"] = df["year_of_release"].str.replace("(", "")
+df["year_of_release"] = df["year_of_release"].astype(str)
+df["year_of_release"] = df["year_of_release"].str.replace("-", "")
 df["year_of_release"] = df["year_of_release"].str.replace(")", "")
 df["run_time"] = df["run_time"].str.replace(" min", "")
 df["gross_total"] = df["gross_total"].str.replace("$", "")
