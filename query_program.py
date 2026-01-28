@@ -1,4 +1,6 @@
 import pyparsing as pp
+from google.cloud.firestore_v1.base_query import FieldFilter, Or # TODO do we need more than this?
+
 # start the query program
 # make a query and revieve a response
 # make additional queries, if desired, and receive responses
@@ -12,7 +14,7 @@ import pyparsing as pp
 class Query:
 
     def __init__(self, column, operator, specification, logical_op=None,
-                 column2 = None, operator2 = None, specification2 = None):
+                 column2 = None, operator2 = None, specification2 = None, valid = False):
         self.column = column
         self.operator = operator
         self.specification = specification
@@ -20,9 +22,7 @@ class Query:
         self.column2 = column2
         self.operator2 = operator2
         self.specification2 = specification2
-
-
-
+        
     def get_column(self):
         return self.column
 
@@ -64,7 +64,36 @@ def validate_input(input):
             return None
 
     print("Valid")
+    # mark the query as valid
+    newQuery.valid = True
     return newQuery
+
+
+# TODO make sure it works once admin is up
+def make_query(query):
+    movies_ref = db.collection("movies")
+
+    # and queries
+    if query.logical_op == "OR":
+
+        movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).where(
+        filter=FieldFilter(query.column2, query.operator2, query.specification2)
+    )
+    # or 
+    if query.logical_op == "OR":
+        movies_ref.where(
+            filter=Or(
+                [
+                    FieldFilter(query.column, query.operator, query.specification),
+                    FieldFilter(query.column2, query.operator2, query.specification2),
+                ]
+            )
+        )
+    # simple queries
+    else:
+        movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification))
+    
+    
 
 
 
@@ -93,7 +122,12 @@ while programOn == True:
 
     # if input is validated, make a query object
     elif programOn == True:
+        # validate the input
         newQuery = validate_input(queryText)
+        # if query is valid, run it
+        if newQuery.valid == True:
+            make_query(newQuery)
+
     
 
 
