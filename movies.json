@@ -2,7 +2,7 @@
   {
     "index":1.0,
     "movie_name":"The Godfather",
-    "year_of_release":"1972",
+    "year_of_release":1972,
     "category":"R",
     "run_time":175,
     "genre":[
@@ -16,7 +16,7 @@
   {
     "index":2.0,
     "movie_name":"The Silence of the Lambs",
-    "year_of_release":"1991",
+    "year_of_release":1991,
     "category":"R",
     "run_time":118,
     "genre":[
@@ -31,7 +31,7 @@
   {
     "index":3.0,
     "movie_name":"Star Wars Episode V The Empire Strikes Back",
-    "year_of_release":"1980",
+    "year_of_release":1980,
     "category":"PG",
     "run_time":124,
     "genre":[
@@ -46,7 +46,7 @@
   {
     "index":4.0,
     "movie_name":"The Shawshank Redemption",
-    "year_of_release":"1994",
+    "year_of_release":1994,
     "category":"R",
     "run_time":142,
     "genre":[
@@ -59,7 +59,7 @@
   {
     "index":5.0,
     "movie_name":"The Shining",
-    "year_of_release":"1980",
+    "year_of_release":1980,
     "category":"R",
     "run_time":146,
     "genre":[
@@ -73,7 +73,7 @@
   {
     "index":6.0,
     "movie_name":"Casablanca",
-    "year_of_release":"1942",
+    "year_of_release":1942,
     "category":"PG",
     "run_time":102,
     "genre":[
@@ -88,7 +88,7 @@
   {
     "index":7.0,
     "movie_name":"One Flew Over the Cuckoo's Nest",
-    "year_of_release":"1975",
+    "year_of_release":1975,
     "category":"R",
     "run_time":133,
     "genre":[
@@ -101,7 +101,7 @@
   {
     "index":8.0,
     "movie_name":"Indiana Jones and the Raiders of the Lost Ark",
-    "year_of_release":"1981",
+    "year_of_release":1981,
     "category":"PG",
     "run_time":115,
     "genre":[
@@ -115,7 +115,7 @@
   {
     "index":9.0,
     "movie_name":"The Lord of the Rings The Return of the King",
-    "year_of_release":"2003",
+    "year_of_release":2003,
     "category":"PG-13",
     "run_time":201,
     "genre":[
@@ -130,7 +130,7 @@
   {
     "index":10.0,
     "movie_name":"Star Wars Episode IV A New Hope",
-    "year_of_release":"1977",
+    "year_of_release":1977,
     "category":"PG",
     "run_time":121,
     "genre":[
@@ -145,7 +145,7 @@
   {
     "index":11.0,
     "movie_name":"The Dark Knight",
-    "year_of_release":"2008",
+    "year_of_release":2008,
     "category":"PG-13",
     "run_time":152,
     "genre":[
@@ -160,7 +160,7 @@
   {
     "index":12.0,
     "movie_name":"The Godfather Part II",
-    "year_of_release":"1974",
+    "year_of_release":1974,
     "category":"R",
     "run_time":202,
     "genre":[
@@ -174,7 +174,7 @@
   {
     "index":13.0,
     "movie_name":"Aliens",
-    "year_of_release":"1986",
+    "year_of_release":1986,
     "category":"R",
     "run_time":137,
     "genre":[
@@ -189,7 +189,7 @@
   {
     "index":14.0,
     "movie_name":"Schindler's List",
-    "year_of_release":"1993",
+    "year_of_release":1993,
     "category":"R",
     "run_time":195,
     "genre":[
@@ -204,7 +204,7 @@
   {
     "index":15.0,
     "movie_name":"Inception",
-    "year_of_release":"2010",
+    "year_of_release":2010,
     "category":"PG-13",
     "run_time":148,
     "genre":[
@@ -219,7 +219,7 @@
   {
     "index":16.0,
     "movie_name":"The Lord of the Rings The Fellowship of the Ring",
-    "year_of_release":"2001",
+    "year_of_release":2001,
     "category":"PG-13",
     "run_time":178,
     "genre":[
@@ -234,7 +234,7 @@
   {
     "index":17.0,
     "movie_name":"Alien",
-    "year_of_release":"1979",
+    "year_of_release":1979,
     "category":"R",
     "run_time":117,
     "genre":[
@@ -248,7 +248,7 @@
   {
     "index":18.0,
     "movie_name":"Some Like It Hot",
-    "year_of_release":"1959",
+    "year_of_release":1959,
     "category":"Passed",
     "run_time":121,
     "genre":[
@@ -263,7 +263,7 @@
   {
     "index":19.0,
     "movie_name":"Blade Runner",
-    "year_of_release":"1982",
+    "year_of_release":1982,
     "category":"R",
     "run_time":117,
     "genre":[
@@ -278,7 +278,7 @@
   {
     "index":20.0,
     "movie_name":"Se7en",
-    "year_of_release":"1995",
+    "year_of_release":1995,
     "category":"R",
     "run_time":127,
     "genre":[
@@ -293,7 +293,7 @@
   {
     "index":21.0,
     "movie_name":"Apocalypse Now",
-    "year_of_release":"1979",
+    "year_of_release":1979,
     "category":"R",
     "run_time":147,
     "genre":[
@@ -308,7 +308,7 @@
   {
     "index":22.0,
     "movie_name":"12 Angry Men",
-    "year_of_release":"1957",
+    "year_of_release":1957,
     "category":"Approved",
     "run_time":96,
     "genre":[
@@ -322,7 +322,7 @@
   {
     "index":23.0,
     "movie_name":"The Lord of the Rings The Two Towers",
-    "year_of_release":"2002",
+    "year_of_release":2002,
     "category":"PG-13",
     "run_time":179,
     "genre":[
@@ -337,7 +337,7 @@
   {
     "index":24.0,
     "movie_name":"Terminator 2 Judgment Day",
-    "year_of_release":"1991",
+    "year_of_release":1991,
     "category":"R",
     "run_time":137,
     "genre":[
@@ -351,7 +351,7 @@
   {
     "index":25.0,
     "movie_name":"Star Wars Episode VI Return of the Jedi",
-    "year_of_release":"1983",
+    "year_of_release":1983,
     "category":"PG",
     "run_time":131,
     "genre":[
@@ -366,7 +366,7 @@
   {
     "index":26.0,
     "movie_name":"Die Hard",
-    "year_of_release":"1988",
+    "year_of_release":1988,
     "category":"R",
     "run_time":132,
     "genre":[
@@ -380,7 +380,7 @@
   {
     "index":27.0,
     "movie_name":"Gone with the Wind",
-    "year_of_release":"1939",
+    "year_of_release":1939,
     "category":"Passed",
     "run_time":238,
     "genre":[
@@ -395,7 +395,7 @@
   {
     "index":28.0,
     "movie_name":"Taxi Driver",
-    "year_of_release":"1976",
+    "year_of_release":1976,
     "category":"R",
     "run_time":114,
     "genre":[
@@ -409,7 +409,7 @@
   {
     "index":29.0,
     "movie_name":"Pulp Fiction",
-    "year_of_release":"1994",
+    "year_of_release":1994,
     "category":"R",
     "run_time":154,
     "genre":[
@@ -423,7 +423,7 @@
   {
     "index":30.0,
     "movie_name":"The Bridge on the River Kwai",
-    "year_of_release":"1957",
+    "year_of_release":1957,
     "category":"PG",
     "run_time":161,
     "genre":[
@@ -438,7 +438,7 @@
   {
     "index":31.0,
     "movie_name":"The Lion King",
-    "year_of_release":"1994",
+    "year_of_release":1994,
     "category":"G",
     "run_time":88,
     "genre":[
@@ -453,7 +453,7 @@
   {
     "index":32.0,
     "movie_name":"North by Northwest",
-    "year_of_release":"1959",
+    "year_of_release":1959,
     "category":"Approved",
     "run_time":136,
     "genre":[
@@ -468,7 +468,7 @@
   {
     "index":33.0,
     "movie_name":"Rear Window",
-    "year_of_release":"1954",
+    "year_of_release":1954,
     "category":"PG",
     "run_time":112,
     "genre":[
@@ -482,7 +482,7 @@
   {
     "index":34.0,
     "movie_name":"Leon The Professional",
-    "year_of_release":"1994",
+    "year_of_release":1994,
     "category":"R",
     "run_time":110,
     "genre":[
@@ -497,7 +497,7 @@
   {
     "index":35.0,
     "movie_name":"Back to the Future",
-    "year_of_release":"1985",
+    "year_of_release":1985,
     "category":"PG",
     "run_time":116,
     "genre":[
@@ -512,7 +512,7 @@
   {
     "index":36.0,
     "movie_name":"Citizen Kane",
-    "year_of_release":"1941",
+    "year_of_release":1941,
     "category":"PG",
     "run_time":119,
     "genre":[
@@ -526,7 +526,7 @@
   {
     "index":37.0,
     "movie_name":"Goodfellas",
-    "year_of_release":"1990",
+    "year_of_release":1990,
     "category":"R",
     "run_time":145,
     "genre":[
@@ -541,7 +541,7 @@
   {
     "index":38.0,
     "movie_name":"Memento",
-    "year_of_release":"2000",
+    "year_of_release":2000,
     "category":"R",
     "run_time":113,
     "genre":[
@@ -555,7 +555,7 @@
   {
     "index":39.0,
     "movie_name":"American Beauty",
-    "year_of_release":"1999",
+    "year_of_release":1999,
     "category":"R",
     "run_time":122,
     "genre":[
@@ -568,7 +568,7 @@
   {
     "index":40.0,
     "movie_name":"As Good as It Gets",
-    "year_of_release":"1997",
+    "year_of_release":1997,
     "category":"PG-13",
     "run_time":139,
     "genre":[
@@ -583,7 +583,7 @@
   {
     "index":41.0,
     "movie_name":"Forrest Gump",
-    "year_of_release":"1994",
+    "year_of_release":1994,
     "category":"PG-13",
     "run_time":142,
     "genre":[
@@ -597,7 +597,7 @@
   {
     "index":42.0,
     "movie_name":"Singin' in the Rain",
-    "year_of_release":"1952",
+    "year_of_release":1952,
     "category":"G",
     "run_time":103,
     "genre":[
@@ -612,7 +612,7 @@
   {
     "index":43.0,
     "movie_name":"Braveheart",
-    "year_of_release":"1995",
+    "year_of_release":1995,
     "category":"R",
     "run_time":178,
     "genre":[
@@ -627,7 +627,7 @@
   {
     "index":44.0,
     "movie_name":"Saving Private Ryan",
-    "year_of_release":"1998",
+    "year_of_release":1998,
     "category":"R",
     "run_time":169,
     "genre":[
@@ -641,7 +641,7 @@
   {
     "index":45.0,
     "movie_name":"Rain Man",
-    "year_of_release":"1988",
+    "year_of_release":1988,
     "category":"R",
     "run_time":133,
     "genre":[
@@ -654,7 +654,7 @@
   {
     "index":46.0,
     "movie_name":"The King's Speech",
-    "year_of_release":"2010",
+    "year_of_release":2010,
     "category":"R",
     "run_time":118,
     "genre":[
@@ -669,7 +669,7 @@
   {
     "index":47.0,
     "movie_name":"2001 A Space Odyssey",
-    "year_of_release":"1968",
+    "year_of_release":1968,
     "category":"G",
     "run_time":149,
     "genre":[
@@ -683,7 +683,7 @@
   {
     "index":48.0,
     "movie_name":"Kill Bill Vol 1",
-    "year_of_release":"2003",
+    "year_of_release":2003,
     "category":"R",
     "run_time":111,
     "genre":[
@@ -698,7 +698,7 @@
   {
     "index":49.0,
     "movie_name":"Avanti!",
-    "year_of_release":"1972",
+    "year_of_release":1972,
     "category":"R",
     "run_time":144,
     "genre":[
@@ -712,7 +712,7 @@
   {
     "index":50.0,
     "movie_name":"The Good the Bad and the Ugly",
-    "year_of_release":"1966",
+    "year_of_release":1966,
     "category":"Approved",
     "run_time":178,
     "genre":[
@@ -726,7 +726,7 @@
   {
     "index":51.0,
     "movie_name":"Amelie",
-    "year_of_release":"2001",
+    "year_of_release":2001,
     "category":"R",
     "run_time":122,
     "genre":[
@@ -740,7 +740,7 @@
   {
     "index":52.0,
     "movie_name":"Modern Times",
-    "year_of_release":"1936",
+    "year_of_release":1936,
     "category":"G",
     "run_time":87,
     "genre":[
@@ -755,7 +755,7 @@
   {
     "index":53.0,
     "movie_name":"Lost in Translation",
-    "year_of_release":"2003",
+    "year_of_release":2003,
     "category":"R",
     "run_time":102,
     "genre":[
@@ -769,7 +769,7 @@
   {
     "index":54.0,
     "movie_name":"Full Metal Jacket",
-    "year_of_release":"1987",
+    "year_of_release":1987,
     "category":"R",
     "run_time":116,
     "genre":[
@@ -783,7 +783,7 @@
   {
     "index":55.0,
     "movie_name":"Requiem for a Dream",
-    "year_of_release":"2000",
+    "year_of_release":2000,
     "category":"R",
     "run_time":102,
     "genre":[
@@ -796,7 +796,7 @@
   {
     "index":56.0,
     "movie_name":"Fight Club",
-    "year_of_release":"1999",
+    "year_of_release":1999,
     "category":"R",
     "run_time":139,
     "genre":[
@@ -809,7 +809,7 @@
   {
     "index":57.0,
     "movie_name":"No Country for Old Men",
-    "year_of_release":"2007",
+    "year_of_release":2007,
     "category":"R",
     "run_time":122,
     "genre":[
@@ -824,7 +824,7 @@
   {
     "index":58.0,
     "movie_name":"Django Unchained",
-    "year_of_release":"2012",
+    "year_of_release":2012,
     "category":"R",
     "run_time":165,
     "genre":[
@@ -838,7 +838,7 @@
   {
     "index":59.0,
     "movie_name":"Children of Men",
-    "year_of_release":"2006",
+    "year_of_release":2006,
     "category":"R",
     "run_time":109,
     "genre":[
@@ -853,7 +853,7 @@
   {
     "index":60.0,
     "movie_name":"Ratatouille",
-    "year_of_release":"2007",
+    "year_of_release":2007,
     "category":"G",
     "run_time":111,
     "genre":[
@@ -868,7 +868,7 @@
   {
     "index":61.0,
     "movie_name":"The Lives of Others",
-    "year_of_release":"2006",
+    "year_of_release":2006,
     "category":"R",
     "run_time":137,
     "genre":[
@@ -883,7 +883,7 @@
   {
     "index":62.0,
     "movie_name":"The Prestige",
-    "year_of_release":"2006",
+    "year_of_release":2006,
     "category":"PG-13",
     "run_time":130,
     "genre":[
@@ -898,7 +898,7 @@
   {
     "index":63.0,
     "movie_name":"V for Vendetta",
-    "year_of_release":"2005",
+    "year_of_release":2005,
     "category":"R",
     "run_time":132,
     "genre":[
@@ -913,7 +913,7 @@
   {
     "index":64.0,
     "movie_name":"Chinatown",
-    "year_of_release":"1974",
+    "year_of_release":1974,
     "category":"R",
     "run_time":130,
     "genre":[
@@ -928,7 +928,7 @@
   {
     "index":65.0,
     "movie_name":"City of God",
-    "year_of_release":"2002",
+    "year_of_release":2002,
     "category":"R",
     "run_time":130,
     "genre":[
@@ -942,7 +942,7 @@
   {
     "index":66.0,
     "movie_name":"To Have and Have Not",
-    "year_of_release":"1944",
+    "year_of_release":1944,
     "category":"Passed",
     "run_time":100,
     "genre":[
@@ -957,7 +957,7 @@
   {
     "index":67.0,
     "movie_name":"Fargo",
-    "year_of_release":"1996",
+    "year_of_release":1996,
     "category":"R",
     "run_time":98,
     "genre":[
@@ -971,7 +971,7 @@
   {
     "index":68.0,
     "movie_name":"Life of Pi",
-    "year_of_release":"2012",
+    "year_of_release":2012,
     "category":"PG",
     "run_time":127,
     "genre":[
@@ -986,7 +986,7 @@
   {
     "index":69.0,
     "movie_name":"Slumdog Millionaire",
-    "year_of_release":"2008",
+    "year_of_release":2008,
     "category":"R",
     "run_time":120,
     "genre":[
@@ -1001,7 +1001,7 @@
   {
     "index":70.0,
     "movie_name":"Vertigo",
-    "year_of_release":"1958",
+    "year_of_release":1958,
     "category":"PG",
     "run_time":128,
     "genre":[
@@ -1016,7 +1016,7 @@
   {
     "index":71.0,
     "movie_name":"Trainspotting",
-    "year_of_release":"1996",
+    "year_of_release":1996,
     "category":"R",
     "run_time":93,
     "genre":[
@@ -1029,7 +1029,7 @@
   {
     "index":72.0,
     "movie_name":"Interstellar",
-    "year_of_release":"2014",
+    "year_of_release":2014,
     "category":"PG-13",
     "run_time":169,
     "genre":[
@@ -1044,7 +1044,7 @@
   {
     "index":73.0,
     "movie_name":"The Thing",
-    "year_of_release":"1982",
+    "year_of_release":1982,
     "category":"R",
     "run_time":109,
     "genre":[
@@ -1059,7 +1059,7 @@
   {
     "index":74.0,
     "movie_name":"The Third Man",
-    "year_of_release":"1949",
+    "year_of_release":1949,
     "category":"Approved",
     "run_time":93,
     "genre":[
@@ -1074,7 +1074,7 @@
   {
     "index":75.0,
     "movie_name":"12 Monkeys",
-    "year_of_release":"1995",
+    "year_of_release":1995,
     "category":"R",
     "run_time":129,
     "genre":[
@@ -1089,7 +1089,7 @@
   {
     "index":76.0,
     "movie_name":"Life Is Beautiful",
-    "year_of_release":"1997",
+    "year_of_release":1997,
     "category":"PG-13",
     "run_time":116,
     "genre":[
@@ -1104,7 +1104,7 @@
   {
     "index":77.0,
     "movie_name":"The Pianist",
-    "year_of_release":"2002",
+    "year_of_release":2002,
     "category":"R",
     "run_time":150,
     "genre":[
@@ -1119,7 +1119,7 @@
   {
     "index":78.0,
     "movie_name":"Magnolia",
-    "year_of_release":"1999",
+    "year_of_release":1999,
     "category":"R",
     "run_time":188,
     "genre":[
@@ -1132,7 +1132,7 @@
   {
     "index":79.0,
     "movie_name":"The Dark Knight Rises",
-    "year_of_release":"2012",
+    "year_of_release":2012,
     "category":"PG-13",
     "run_time":164,
     "genre":[
@@ -1146,7 +1146,7 @@
   {
     "index":80.0,
     "movie_name":"Star Wars Episode VII The Force Awakens",
-    "year_of_release":"2015",
+    "year_of_release":2015,
     "category":"PG-13",
     "run_time":138,
     "genre":[
@@ -1161,7 +1161,7 @@
   {
     "index":81.0,
     "movie_name":"The Hobbit The Desolation of Smaug",
-    "year_of_release":"2013",
+    "year_of_release":2013,
     "category":"PG-13",
     "run_time":161,
     "genre":[
@@ -1175,7 +1175,7 @@
   {
     "index":82.0,
     "movie_name":"Mad Max Fury Road",
-    "year_of_release":"2015",
+    "year_of_release":2015,
     "category":"R",
     "run_time":120,
     "genre":[
@@ -1190,7 +1190,7 @@
   {
     "index":83.0,
     "movie_name":"12 Years a Slave",
-    "year_of_release":"2013",
+    "year_of_release":2013,
     "category":"R",
     "run_time":134,
     "genre":[
@@ -1205,7 +1205,7 @@
   {
     "index":84.0,
     "movie_name":"Indiana Jones and the Last Crusade",
-    "year_of_release":"1989",
+    "year_of_release":1989,
     "category":"PG-13",
     "run_time":127,
     "genre":[
@@ -1219,7 +1219,7 @@
   {
     "index":85.0,
     "movie_name":"O Brother Where Art Thou?",
-    "year_of_release":"2000",
+    "year_of_release":2000,
     "category":"PG-13",
     "run_time":107,
     "genre":[
@@ -1234,7 +1234,7 @@
   {
     "index":86.0,
     "movie_name":"Inglourious Basterds",
-    "year_of_release":"2009",
+    "year_of_release":2009,
     "category":"R",
     "run_time":153,
     "genre":[
@@ -1249,7 +1249,7 @@
   {
     "index":87.0,
     "movie_name":"The Departed",
-    "year_of_release":"2006",
+    "year_of_release":2006,
     "category":"R",
     "run_time":151,
     "genre":[
@@ -1264,7 +1264,7 @@
   {
     "index":88.0,
     "movie_name":"A Beautiful Mind",
-    "year_of_release":"2001",
+    "year_of_release":2001,
     "category":"PG-13",
     "run_time":135,
     "genre":[
@@ -1278,7 +1278,7 @@
   {
     "index":89.0,
     "movie_name":"District 9",
-    "year_of_release":"2009",
+    "year_of_release":2009,
     "category":"R",
     "run_time":112,
     "genre":[
@@ -1293,7 +1293,7 @@
   {
     "index":90.0,
     "movie_name":"The Piano",
-    "year_of_release":"1993",
+    "year_of_release":1993,
     "category":"R",
     "run_time":121,
     "genre":[
@@ -1308,7 +1308,7 @@
   {
     "index":91.0,
     "movie_name":"Mystic River",
-    "year_of_release":"2003",
+    "year_of_release":2003,
     "category":"R",
     "run_time":138,
     "genre":[
@@ -1323,7 +1323,7 @@
   {
     "index":92.0,
     "movie_name":"The Insider",
-    "year_of_release":"1999",
+    "year_of_release":1999,
     "category":"R",
     "run_time":157,
     "genre":[
@@ -1338,7 +1338,7 @@
   {
     "index":93.0,
     "movie_name":"LA Confidential",
-    "year_of_release":"1997",
+    "year_of_release":1997,
     "category":"R",
     "run_time":138,
     "genre":[
@@ -1353,7 +1353,7 @@
   {
     "index":94.0,
     "movie_name":"Heat",
-    "year_of_release":"1995",
+    "year_of_release":1995,
     "category":"R",
     "run_time":170,
     "genre":[
@@ -1368,7 +1368,7 @@
   {
     "index":95.0,
     "movie_name":"The Usual Suspects",
-    "year_of_release":"1995",
+    "year_of_release":1995,
     "category":"R",
     "run_time":106,
     "genre":[
@@ -1383,7 +1383,7 @@
   {
     "index":96.0,
     "movie_name":"Cool Hand Luke",
-    "year_of_release":"1967",
+    "year_of_release":1967,
     "category":"GP",
     "run_time":127,
     "genre":[
@@ -1397,7 +1397,7 @@
   {
     "index":97.0,
     "movie_name":"Eternal Sunshine of the Spotless Mind",
-    "year_of_release":"2004",
+    "year_of_release":2004,
     "category":"R",
     "run_time":108,
     "genre":[
@@ -1412,7 +1412,7 @@
   {
     "index":98.0,
     "movie_name":"City Lights",
-    "year_of_release":"1931",
+    "year_of_release":1931,
     "category":"G",
     "run_time":87,
     "genre":[
@@ -1427,7 +1427,7 @@
   {
     "index":99.0,
     "movie_name":"The Matrix",
-    "year_of_release":"1999",
+    "year_of_release":1999,
     "category":"R",
     "run_time":136,
     "genre":[
