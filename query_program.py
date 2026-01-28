@@ -7,7 +7,37 @@ from google.cloud.firestore_v1.base_query import FieldFilter, Or # TODO do we ne
 # exit the program
 
 
+# movie class
+class Movie:
+    def __init__(self, index: int, movie_name: str, year_of_release: int, category: str, run_time: int, genre: list[str], imdb_rating: float, votes: int, gross_total: float, seen: str):
+        self.index = index
+        self.movie_name = movie_name
+        self.year_of_release = year_of_release
+        self.category = category
+        self.run_time = run_time
+        self.genre = genre
+        self.imdb_rating = imdb_rating
+        self.votes = votes
+        self.gross_total = gross_total
+        self.seen = seen
 
+    # returns a dictionary containing all of the information of the movie
+    def to_dict(self):
+        return {"index": self.index, 
+                "movie_name": self.movie_name,
+                "year_of_release": self.year_of_release,
+                "category": self.category,
+                "run_time": self.run_time,
+                "genre": self.genre,
+                "imdb_rating": self.imdb_rating,
+                "votes": self.votes,
+                "gross_total": self.gross_total,
+                "seen": self.seen}
+    
+    # takes in a dictionary and returns a movie object
+    @staticmethod
+    def from_dict(source):
+        return Movie(source['index'], source['movie_name'], source['year_of_release'], source['category'], source['run_time'], source['genre'], source['imdb_rating'], source['votes'], source['gross_total'], source['seen'])
 
 # query class
 # instance created when user makes a query
@@ -127,9 +157,3 @@ while programOn == True:
         # if query is valid, run it
         if newQuery.valid == True:
             make_query(newQuery)
-
-    
-
-
-
-
