@@ -1,5 +1,9 @@
 import pyparsing as pp
 from google.cloud.firestore_v1.base_query import FieldFilter, Or # TODO do we need more than this?
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+
 
 # start the query program
 # make a query and revieve a response
@@ -67,7 +71,7 @@ class Query:
 def validate_input(input):
 
     category = pp.QuotedString('"')
-    operator = pp.one_of("= < > <= >= != of")
+    operator = pp.one_of("== < > <= >= != of")
     specification = pp.QuotedString('"')
 
     logical_op = pp.Keyword("AND") | pp.Keyword("OR")
@@ -128,6 +132,13 @@ def make_query(query):
 
 
 # main goes here
+
+# setup for firebase
+cred = credentials.Certificate("movie-collection-fd2b8-firebase-adminsdk-fbsvc-0d2c29ef17.json")
+
+firebase_admin.initialize_app(cred)
+db = firestore.client()
+
 
 programOn = True # boolean value for turning on the query program
 while programOn == True:
