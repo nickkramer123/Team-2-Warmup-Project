@@ -48,7 +48,7 @@ class Movie:
 class Query:
 
     def __init__(self, column, operator, specification, logical_op=None,
-                 column2 = None, operator2 = None, specification2 = None, valid = False):
+                 column2 = None, operator2 = None, specification2 = None):
         self.column = column
         self.operator = operator
         self.specification = specification
@@ -56,6 +56,7 @@ class Query:
         self.column2 = column2
         self.operator2 = operator2
         self.specification2 = specification2
+        self.valid = False
         
     def get_column(self):
         return self.column
@@ -71,7 +72,7 @@ class Query:
 def validate_input(input):
 
     category = pp.QuotedString('"')
-    operator = pp.one_of("== < > <= >= != of")
+    operator = pp.one_of("== < > <= >= != in")
     specification = pp.QuotedString('"')
 
     logical_op = pp.Keyword("AND") | pp.Keyword("OR")
@@ -94,10 +95,8 @@ def validate_input(input):
             newQuery = Query(parsed[0], parsed[1], parsed[2])
 
         except pp.exceptions.ParseException as e2:
-            print("INVALID INVALID")
             return None
 
-    print("Valid")
     # mark the query as valid
     newQuery.valid = True
     return newQuery
@@ -166,5 +165,10 @@ while programOn == True:
         # validate the input
         newQuery = validate_input(queryText)
         # if query is valid, run it
-        if newQuery.valid == True:
+        if newQuery is not None:
             finalQuery = make_query(newQuery)
+            print("valid query")
+            # TODO: make the query print output here
+        else:
+            print("invalid query. Try again")
+        
