@@ -127,7 +127,7 @@ def make_query(query):
         finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).where(
         filter=FieldFilter(query.column2, query.operator2, query.specification2)).stream()
     # or 
-    if query.logical_op == "OR":
+    elif query.logical_op == "OR":
         finishedQuery = movies_ref.where(
             filter=Or(
                 [
