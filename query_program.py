@@ -4,6 +4,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
+from tabulate import tabulate
 
 # start the query program
 # make a query and revieve a response
@@ -42,6 +43,9 @@ class Movie:
     @staticmethod
     def from_dict(source):
         return Movie(source['index'], source['movie_name'], source['year_of_release'], source['category'], source['run_time'], source['genre'], source['imdb_rating'], source['votes'], source['gross_total'], source['seen'])
+
+    def __str__(self):
+        return tabulate(self.to_dict())
 
 # query class
 # instance created when user makes a query
@@ -155,9 +159,11 @@ while programOn == True:
         print("Initial command: category")
         print("Ex. Genre, Year of Release, Category")
         print("Initial command: operator")
-        print("Ex. =, <, >, in")
+        print("Ex.==, <, >, <=, >=, !=, in")
         print("Initial command: specification")
-        print("Example query: Genre = Drama")
+        print("Example query: \"Genre\" == \"Drama\"")
+        print("Combine two queries with AND or OR")
+        print("Example query: \"year_of_release\" > \"1990\" AND \"category\" == \"R\"")
         print("input EXIT to end the program")
 
     # if input is validated, make a query object
