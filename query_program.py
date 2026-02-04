@@ -32,16 +32,23 @@ class Movie:
 
     # returns a dictionary containing all of the information of the movie
     def to_dict(self):
-        return {"index": self.index, 
-                "movie_name": self.movie_name,
-                "year_of_release": self.year_of_release,
-                "category": self.category,
-                "run_time": self.run_time,
-                "genre": self.genre,
-                "imdb_rating": self.imdb_rating,
-                "votes": self.votes,
-                "gross_total": self.gross_total,
-                "seen": self.seen}
+        genre_str = ""
+        for g in range(0,len(self.genre)):
+            if g != len(self.genre) - 1:
+                genre_str += self.genre[g] + ", "
+            else:
+                genre_str += self.genre[g]
+
+        return {"index": f"{self.index}", 
+                "movie_name": f"{self.movie_name}",
+                "year_of_release": f"{self.year_of_release}",
+                "category": f"{self.category}",
+                "run_time": f"{self.run_time}",
+                "genre": f"{genre_str}",
+                "imdb_rating": f"{self.imdb_rating}",
+                "votes": f"{self.votes}",
+                "gross_total": f"{self.gross_total}",
+                "seen": f"{self.seen}"}
     
     # takes in a dictionary and returns a movie object
     @staticmethod
@@ -184,10 +191,11 @@ while programOn == True:
         if newQuery is not None:
             finalQuery = make_query(newQuery)
 
-            movies_ref = db.collection("movies").stream()
-            for doc in movies_ref:
+            data = []
+            for doc in finalQuery:
                 movie = Movie.from_dict(doc.to_dict())
-                print(movie)
+                data.append(movie.to_dict())
+            print(tabulate(data, headers="keys", tablefmt="grid"))
 
             # TODO: make the query print output here
 
