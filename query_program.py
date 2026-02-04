@@ -3,6 +3,10 @@ from google.cloud.firestore_v1.base_query import FieldFilter, Or # TODO do we ne
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+from firebase_admin import firestore_async
+from google.cloud.firestore import AsyncClient
+
+
 
 from tabulate import tabulate
 
@@ -108,13 +112,13 @@ def validate_input(input):
 
 # TODO make sure it works once admin is up
 def make_query(query):
-    movies_ref = db.collection("movies")
+    
 
     # and queries
     if query.logical_op == "AND":
 
         finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).where(
-        filter=FieldFilter(query.column2, query.operator2, query.specification2)
+        filter=FieldFilter(query.column2, query.operator2, query.specification2).stream()
     )
     # or 
     if query.logical_op == "OR":
@@ -125,12 +129,16 @@ def make_query(query):
                     FieldFilter(query.column2, query.operator2, query.specification2),
                 ]
             )
-        )
+        ).stream()
     # simple queries
     else:
-        finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification))
+        finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).stream()
     return finishedQuery
     
+
+# function that runs query/validates it
+
+# function that prints query output
 
 
 
@@ -138,11 +146,14 @@ def make_query(query):
 
 # setup for firebase
 cred = credentials.Certificate("movie-collection-fd2b8-firebase-adminsdk-fbsvc-0d2c29ef17.json")
+app = firebase_admin.initialize_app(cred)
 
-firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 
+
+
+# program loop
 programOn = True # boolean value for turning on the query program
 while programOn == True:
 
@@ -173,8 +184,18 @@ while programOn == True:
         # if query is valid, run it
         if newQuery is not None:
             finalQuery = make_query(newQuery)
-            print("valid query")
+
+            movies_ref = db.collection("movies").stream()
+            for doc in movies_ref:
+                movie = Movie.from_dict(doc.to_dict())
+                print(movie)
+
             # TODO: make the query print output here
+
+
+            # for movie in finalQuery:
+            #     print(f"{movie.id} => {movie.to_dict()}")
+        
         else:
             print("invalid query. Try again")
         
