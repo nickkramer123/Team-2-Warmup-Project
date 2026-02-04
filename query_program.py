@@ -49,7 +49,7 @@ class Movie:
         return Movie(source['index'], source['movie_name'], source['year_of_release'], source['category'], source['run_time'], source['genre'], source['imdb_rating'], source['votes'], source['gross_total'], source['seen'])
 
     def __str__(self):
-        return tabulate(self.to_dict())
+        return self.movie_name
 
 # query class
 # instance created when user makes a query
@@ -118,8 +118,7 @@ def make_query(query):
     if query.logical_op == "AND":
 
         finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).where(
-        filter=FieldFilter(query.column2, query.operator2, query.specification2).stream()
-    )
+        filter=FieldFilter(query.column2, query.operator2, query.specification2)).stream()
     # or 
     if query.logical_op == "OR":
         finishedQuery = movies_ref.where(
@@ -149,7 +148,7 @@ cred = credentials.Certificate("movie-collection-fd2b8-firebase-adminsdk-fbsvc-0
 app = firebase_admin.initialize_app(cred)
 
 db = firestore.client()
-
+movies_ref = db.collection("movies")
 
 
 
