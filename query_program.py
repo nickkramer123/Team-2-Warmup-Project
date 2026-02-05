@@ -5,16 +5,15 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 from firebase_admin import firestore_async
 from google.cloud.firestore import AsyncClient
-
-
-
 from tabulate import tabulate
 
-# start the query program
-# make a query and revieve a response
-# make additional queries, if desired, and receive responses
-# exit the program
 
+
+# setup for firebase
+cred = credentials.Certificate("movie-collection-fd2b8-firebase-adminsdk-fbsvc-0d2c29ef17.json")
+app = firebase_admin.initialize_app(cred)
+db = firestore.client()
+movies_ref = db.collection("movies")
 
 # movie class
 class Movie:
@@ -41,7 +40,7 @@ class Movie:
 
         return {"index": f"{self.index}", 
                 "movie_name": f"{self.movie_name}",
-                "year_of_release": f"{self.year_of_release}",
+                "year_of_release": self.year_of_release,
                 "category": f"{self.category}",
                 "run_time": f"{self.run_time}",
                 "genre": f"{genre_str}",
@@ -81,14 +80,30 @@ class Query:
     
     def get_specification(self):
         return self.specification
+    
+# helper dictionary function so integers work
+NUMERIC = {
+    "year_of_release": int,
+    "run_time": int,
+    "votes": int,
+    "imdb_rating": float,
+    "gross_total": float,
+}
+
+def if_numeric(column, value):
+    if column in NUMERIC:
+        return NUMERIC[column](value)
+    else:
+        return value   
 
 # some function for input validation using pyparsing
 # returns input in the form of a query
 def validate_input(input):
 
     category = pp.QuotedString('"')
-    operator = pp.one_of("== < > <= >= != in")
+    operator = pp.one_of("== < > <= >= != array_contains")
     specification = pp.QuotedString('"')
+
 
     logical_op = pp.Keyword("AND") | pp.Keyword("OR")
 
@@ -120,25 +135,30 @@ def validate_input(input):
 # TODO make sure it works once admin is up
 def make_query(query):
     
+    # check for integers
+    specification1 = if_numeric(query.column, query.specification)
 
     # and queries
     if query.logical_op == "AND":
 
-        finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).where(
-        filter=FieldFilter(query.column2, query.operator2, query.specification2)).stream()
+        specification2 = if_numeric(query.column, query.specification2)
+        finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, specification1)).where(
+        filter=FieldFilter(query.column2, query.operator2, specification2)).stream()
+
     # or 
     elif query.logical_op == "OR":
+        specification2 = if_numeric(query.column, query.specification2)
         finishedQuery = movies_ref.where(
             filter=Or(
                 [
-                    FieldFilter(query.column, query.operator, query.specification),
-                    FieldFilter(query.column2, query.operator2, query.specification2),
+                    FieldFilter(query.column, query.operator, specification1),
+                    FieldFilter(query.column2, query.operator2, specification2),
                 ]
             )
         ).stream()
     # simple queries
     else:
-        finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).stream()
+        finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, specification1)).stream()
     return finishedQuery
     
 
@@ -149,60 +169,49 @@ def make_query(query):
 
 
 # main goes here
+def main():
+    
+    # program loop
+    programOn = True # boolean value for turning on the query program
+    while programOn == True:
 
-# setup for firebase
-cred = credentials.Certificate("movie-collection-fd2b8-firebase-adminsdk-fbsvc-0d2c29ef17.json")
-app = firebase_admin.initialize_app(cred)
+        # while input is not valid, ask for query
+        print("Make a query, input HELP for instructions, or EXIT")
+        queryText = input("make a query: ")
 
-db = firestore.client()
-movies_ref = db.collection("movies")
+        # if exit 
+        if queryText == "EXIT":
+            programOn = False
 
+        elif queryText == "HELP":
+            print("Query structure:")
+            print('"category", operator, "specification"')
+            print("categories:")
+            print("genre, year _of_release, category, movie_name, runtime, imdb_rating, gross_total, seen")
+            print("operators:")
+            print("==, <, >, <=, >=, !=, array-contains (only for genre)")
+            print("Example query: \"genre\" array_contains \"Drama\"")
+            print("Combine two queries with AND or OR")
+            print("Example query: \"year_of_release\" > \"1990\" AND \"category\" == \"R\"")
+            print("input EXIT to end the program")
 
+        # if input is validated, make a query object
+        elif programOn == True:
+            # validate the input
+            newQuery = validate_input(queryText)
+            # if query is valid, run it
+            if newQuery is not None:
+                finalQuery = make_query(newQuery)
 
-# program loop
-programOn = True # boolean value for turning on the query program
-while programOn == True:
-
-    # while input is not valid, ask for query
-    print("Make a query, or input HELP for instructions")
-    queryText = input("make a query: ")
-
-    # if exit 
-    if queryText == "EXIT":
-        programOn = False
-
-    elif queryText == "HELP":
-        print("Query structure: \n")
-        print("Initial command: category")
-        print("Ex. Genre, Year of Release, Category")
-        print("Initial command: operator")
-        print("Ex.==, <, >, <=, >=, !=, in")
-        print("Initial command: specification")
-        print("Example query: \"Genre\" == \"Drama\"")
-        print("Combine two queries with AND or OR")
-        print("Example query: \"year_of_release\" > \"1990\" AND \"category\" == \"R\"")
-        print("input EXIT to end the program")
-
-    # if input is validated, make a query object
-    elif programOn == True:
-        # validate the input
-        newQuery = validate_input(queryText)
-        # if query is valid, run it
-        if newQuery is not None:
-            finalQuery = make_query(newQuery)
-
-            data = []
-            for doc in finalQuery:
-                movie = Movie.from_dict(doc.to_dict())
-                data.append(movie.to_dict())
-            print(tabulate(data, headers="keys", tablefmt="grid"))
-
-            # TODO: make the query print output here
+                data = []
+                for doc in finalQuery:
+                    movie = Movie.from_dict(doc.to_dict())
+                    data.append(movie.to_dict())
+                print(tabulate(data, headers="keys", tablefmt="grid"))
 
 
-            # for movie in finalQuery:
-            #     print(f"{movie.id} => {movie.to_dict()}")
-        
-        else:
-            print("invalid query. Try again")
-        
+            else:
+                print("invalid query. Try again")
+            
+if __name__ == "__main__":
+    main()
