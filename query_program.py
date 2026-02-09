@@ -1,13 +1,9 @@
 import pyparsing as pp
-from google.cloud.firestore_v1.base_query import FieldFilter, Or # TODO do we need more than this?
+from google.cloud.firestore_v1.base_query import FieldFilter, Or
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-from firebase_admin import firestore_async
-from google.cloud.firestore import AsyncClient
 from tabulate import tabulate
-
-
 
 # setup for firebase
 cred = credentials.Certificate("movie-collection-fd2b8-firebase-adminsdk-fbsvc-0d2c29ef17.json")
@@ -16,6 +12,7 @@ db = firestore.client()
 movies_ref = db.collection("movies")
 
 # movie class
+# holds all of the movie information and allows for ease of data transformation from firebase to a dictionary
 class Movie:
     def __init__(self, index: int, movie_name: str, year_of_release: int, category: str, run_time: int, genre: list[str], imdb_rating: float, votes: int, gross_total: float, seen: str):
         self.index = index
@@ -60,7 +57,6 @@ class Movie:
 # query class
 # instance created when user makes a query
 class Query:
-
     def __init__(self, column, operator, specification, logical_op=None,
                  column2 = None, operator2 = None, specification2 = None):
         self.column = column
@@ -71,15 +67,6 @@ class Query:
         self.operator2 = operator2
         self.specification2 = specification2
         self.valid = False
-        
-    def get_column(self):
-        return self.column
-
-    def get_operator(self):
-        return self.operator
-    
-    def get_specification(self):
-        return self.specification
     
 # helper dictionary function so integers work
 NUMERIC = {
@@ -95,48 +82,55 @@ def if_numeric(column, value):
         return NUMERIC[column](value)
     else:
         return value   
+    
+# helper function to handle genre array_contains
+def genre_check(column, operator, specification):
+    if column == "genre":
+        if operator == "==":
+            operator = "array_contains"
+        if operator == "!=":
+            operator = "not-in"
+            specification = [specification]
+    return operator, specification
 
-# some function for input validation using pyparsing
-# returns input in the form of a query
+# validate_input function for input validation using pyparsing
+# takes in the user input and returns it in the form of a Query or None is Query is not valid
 def validate_input(input):
-
+    #setup pyparsing
     category = pp.QuotedString('"')
     operator = pp.one_of("== < > <= >= != array_contains")
     specification = pp.QuotedString('"')
-
 
     logical_op = pp.Keyword("AND") | pp.Keyword("OR")
 
     parsed_query = category + operator + specification
     comp_query = parsed_query + logical_op + parsed_query
     
-
     # if and/or operator exists
     try:
         # created parsed query
         parsed = comp_query.parse_string(input, parse_all=True)
         newQuery = Query(parsed[0], parsed[1], parsed[2], parsed[3], parsed[4], parsed[5], parsed[6])
-
     # else
     except pp.ParseException as e:
         try:
             # created parsed query
             parsed = parsed_query.parse_string(input, parse_all=True)
             newQuery = Query(parsed[0], parsed[1], parsed[2])
-
         except pp.exceptions.ParseException as e2:
             return None
-
     # mark the query as valid
     newQuery.valid = True
     return newQuery
 
-
-# TODO make sure it works once admin is up
+# make_query function takes in a Query and returns the ou
 def make_query(query):
-    
     # check for integers
     specification1 = if_numeric(query.column, query.specification)
+    # handle case for list type of genre
+    query.operator, query.specification = genre_check(query.column, query.operator, query.specification)
+    if query.logical_op:
+        query.operator2 = genre_check(query.column2, query.operator2)
 
     # and queries
     if query.logical_op == "AND":
@@ -160,17 +154,11 @@ def make_query(query):
     else:
         finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, specification1)).stream()
     return finishedQuery
-    
 
-# function that runs query/validates it
-
-# function that prints query output
-
-
-
-# main goes here
+# main function handles the user input from the command line
+# it asks for user input and then calls validate_input and make_query functions to interact with firebase db
+# main then prints the information the user requested from the db
 def main():
-    
     # program loop
     programOn = True # boolean value for turning on the query program
     while programOn == True:
@@ -187,7 +175,7 @@ def main():
             print("Query structure:")
             print('"category", operator, "specification"')
             print("categories:")
-            print("genre, year _of_release, category, movie_name, runtime, imdb_rating, gross_total, seen")
+            print("genre, year_of_release, category, movie_name, runtime, imdb_rating, gross_total, seen")
             print("operators:")
             print("==, <, >, <=, >=, !=, array-contains (only for genre)")
             print("Example query: \"genre\" array_contains \"Drama\"")
@@ -202,13 +190,12 @@ def main():
             # if query is valid, run it
             if newQuery is not None:
                 finalQuery = make_query(newQuery)
-
+                # format data returned from query to be ready to print
                 data = []
                 for doc in finalQuery:
                     movie = Movie.from_dict(doc.to_dict())
                     data.append(movie.to_dict())
                 print(tabulate(data, headers="keys", tablefmt="grid"))
-
 
             else:
                 print("invalid query. Try again")
