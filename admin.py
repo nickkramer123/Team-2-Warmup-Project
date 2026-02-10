@@ -8,23 +8,14 @@ import json
 import sys
 from conn_auth import get_auth
 
-# TODO: add Movie class
-# TODO: Add basic dataset validation
-# TODO: Clarify required vs. optional fields
-# class Movies:
-#     def __init__(self):
-#         pass
-
-
 ''' load_dataset() reads JSON file and returns python object'''
-
 def load_dataset(str_path):
     with open(str_path, "r", encoding="utf-8") as f:
         dataset = json.load(f)
     return dataset
 
-''' delete_collection() uses the firestore object to delete all documents'''
 
+''' delete_collection() uses the firestore object to delete all documents'''
 def delete_collection(coll_ref, batch_size):
     if batch_size == 0:
         return
@@ -39,9 +30,9 @@ def delete_collection(coll_ref, batch_size):
     if deleted >= batch_size:
         return delete_collection(coll_ref, batch_size)
 
+
 ''' upload_movies() takes db object and dataset loaded from JSON.
 Uploads/writes each movie as a document in the collection'''
-
 def upload_movies(coll_ref, movies):
 
     uploaded = 0
@@ -49,10 +40,12 @@ def upload_movies(coll_ref, movies):
     for m in movies:
         if not isinstance(m, dict):
             continue # only dictionaries
+
         coll_ref.add(m)  # document being added
         uploaded = uploaded + 1
 
     print(f"Uploaded {uploaded} docs")
+
 
 def main():
     # Check for program to take a single command-line argument
