@@ -84,21 +84,23 @@ def if_numeric(column, value):
         return value   
     
 # helper function to handle genre array_contains
-def genre_check(column, operator, specification):
+def genre_check(column, operator):
     if column == "genre":
-        if operator == "==":
+        #handles if the user is looking for not what they specified
+        if operator == "!=" or operator == ">" or operator == "<":
+            operator = "array_contains_not"
+        else:
+            # handles if the user wants ==, >=, or <=
             operator = "array_contains"
-        if operator == "!=":
-            operator = "not-in"
-            specification = [specification]
-    return operator, specification
+    
+    return operator
 
 # validate_input function for input validation using pyparsing
 # takes in the user input and returns it in the form of a Query or None is Query is not valid
 def validate_input(input):
     #setup pyparsing
-    category = pp.QuotedString('"')
-    operator = pp.one_of("== < > <= >= != array_contains")
+    category = pp.Word(pp.alphas + "_")
+    operator = pp.one_of("== < > <= >= !=")
     specification = pp.QuotedString('"')
 
     logical_op = pp.Keyword("AND") | pp.Keyword("OR")
@@ -126,33 +128,47 @@ def validate_input(input):
 # make_query function takes in a Query and returns the ou
 def make_query(query):
     # check for integers
-    specification1 = if_numeric(query.column, query.specification)
+    query.specification = if_numeric(query.column, query.specification)
     # handle case for list type of genre
-    query.operator, query.specification = genre_check(query.column, query.operator, query.specification)
-    if query.logical_op:
-        query.operator2 = genre_check(query.column2, query.operator2)
+    query.operator = genre_check(query.column, query.operator)
 
     # and queries
     if query.logical_op == "AND":
-
-        specification2 = if_numeric(query.column, query.specification2)
-        finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, specification1)).where(
-        filter=FieldFilter(query.column2, query.operator2, specification2)).stream()
+        query.specification2 = if_numeric(query.column2, query.specification2)
+        query.operator2 = genre_check(query.column2, query.operator2)
+        #Seperated AND queries because only one "array-contains" can be used in one query at a time to firebase
+        finishedQuery1 = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).get()
+        finishedQuery2 = movies_ref.where(filter=FieldFilter(query.column2, query.operator2, query.specification2)).get()
+        finishedQuery = []
+        for doc in finishedQuery1:
+            if doc in finishedQuery2:
+                finishedQuery.append(doc)
 
     # or 
     elif query.logical_op == "OR":
-        specification2 = if_numeric(query.column, query.specification2)
+        query.specification2 = if_numeric(query.column2, query.specification2)
+        query.operator2 = genre_check(query.column2, query.operator2)
         finishedQuery = movies_ref.where(
             filter=Or(
                 [
-                    FieldFilter(query.column, query.operator, specification1),
-                    FieldFilter(query.column2, query.operator2, specification2),
+                    FieldFilter(query.column, query.operator, query.specification),
+                    FieldFilter(query.column2, query.operator2, query.specification2),
                 ]
             )
         ).stream()
+        
     # simple queries
     else:
-        finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, specification1)).stream()
+        #TODO: apply array_contains_not to AND and OR queries
+        if query.operator == "array_contains_not":
+            notQuery = movies_ref.where(filter=FieldFilter(query.column, "array_contains", query.specification)).get()
+            allQuery = movies_ref.get()
+            finishedQuery = []
+            for doc in allQuery:
+                if doc not in notQuery:
+                    finishedQuery.append(doc)
+        else:
+            finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).stream()
     return finishedQuery
 
 # main function handles the user input from the command line
@@ -173,14 +189,14 @@ def main():
 
         elif queryText == "HELP":
             print("Query structure:")
-            print('"category", operator, "specification"')
+            print('category operator "specification"')
             print("categories:")
             print("genre, year_of_release, category, movie_name, runtime, imdb_rating, gross_total, seen")
             print("operators:")
-            print("==, <, >, <=, >=, !=, array-contains (only for genre)")
-            print("Example query: \"genre\" array_contains \"Drama\"")
+            print("==, <, >, <=, >=, !=")
+            print("Example query: genre == \"Drama\"")
             print("Combine two queries with AND or OR")
-            print("Example query: \"year_of_release\" > \"1990\" AND \"category\" == \"R\"")
+            print("Example query: year_of_release > \"1990\" AND category == \"R\"")
             print("input EXIT to end the program")
 
         # if input is validated, make a query object
