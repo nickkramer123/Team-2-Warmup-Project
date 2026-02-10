@@ -72,6 +72,5 @@ def main():
     upload_movies(coll_ref, movies)
     print("Done.")
 
-
 if __name__ == "__main__":
     main()
