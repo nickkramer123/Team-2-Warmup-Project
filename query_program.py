@@ -92,8 +92,32 @@ def genre_check(column, operator):
         else:
             # handles if the user wants ==, >=, or <=
             operator = "array_contains"
-    
     return operator
+
+#helper function to handle array_contains_not
+def array_contains_not(query, movies_ref):
+    finishedQuery1 = []
+    finishedQuery2 = []
+    # If the first operator is a not operator
+    if query.operator == "array_contains_not":
+        notQuery = movies_ref.where(filter=FieldFilter(query.column, "array_contains", query.specification)).get()
+        allQuery = movies_ref.get()
+        for doc in allQuery:
+            if doc not in notQuery:
+                finishedQuery1.append(doc)
+    else:
+        finishedQuery1 = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).get()
+    # If the second operator exists and is a not operator
+    if query.operator2 and query.operator2 == "array_contains_not":
+        notQuery = movies_ref.where(filter=FieldFilter(query.column2, "array_contains", query.specification2)).get()
+        allQuery = movies_ref.get()
+        for doc in allQuery:
+            if doc not in notQuery:
+                finishedQuery2.append(doc)
+    elif query.operator2:
+        finishedQuery2 = movies_ref.where(filter=FieldFilter(query.column2, query.operator2, query.specification2)).get()
+    #return finishedQuery1 and finishedQuery2
+    return finishedQuery1, finishedQuery2
 
 # validate_input function for input validation using pyparsing
 # takes in the user input and returns it in the form of a Query or None is Query is not valid
@@ -137,8 +161,11 @@ def make_query(query):
         query.specification2 = if_numeric(query.column2, query.specification2)
         query.operator2 = genre_check(query.column2, query.operator2)
         #Seperated AND queries because only one "array-contains" can be used in one query at a time to firebase
-        finishedQuery1 = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).get()
-        finishedQuery2 = movies_ref.where(filter=FieldFilter(query.column2, query.operator2, query.specification2)).get()
+        if query.operator == "array_contains_not" or query.operator2 == "array_contains_not":
+            finishedQuery1, finishedQuery2 = array_contains_not(query, movies_ref)
+        else:
+            finishedQuery1 = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).get()
+            finishedQuery2 = movies_ref.where(filter=FieldFilter(query.column2, query.operator2, query.specification2)).get()
         finishedQuery = []
         for doc in finishedQuery1:
             if doc in finishedQuery2:
@@ -148,25 +175,29 @@ def make_query(query):
     elif query.logical_op == "OR":
         query.specification2 = if_numeric(query.column2, query.specification2)
         query.operator2 = genre_check(query.column2, query.operator2)
-        finishedQuery = movies_ref.where(
-            filter=Or(
-                [
-                    FieldFilter(query.column, query.operator, query.specification),
-                    FieldFilter(query.column2, query.operator2, query.specification2),
-                ]
-            )
-        ).stream()
+        if query.operator == "array_contains_not" or query.operator2 == "array_contains_not":
+            finishedQuery1, finishedQuery2 = array_contains_not(query, movies_ref)
+            finishedQuery = []
+            for doc in finishedQuery1:
+                finishedQuery.append(doc)
+            for doc in finishedQuery2:
+                if doc not in finishedQuery:
+                    finishedQuery.append(doc)
+        else:
+            finishedQuery = movies_ref.where(
+                filter=Or(
+                    [
+                        FieldFilter(query.column, query.operator, query.specification),
+                        FieldFilter(query.column2, query.operator2, query.specification2),
+                    ]
+                )
+            ).stream()
         
     # simple queries
     else:
-        #TODO: apply array_contains_not to AND and OR queries
+        # handle special case of not included in an array
         if query.operator == "array_contains_not":
-            notQuery = movies_ref.where(filter=FieldFilter(query.column, "array_contains", query.specification)).get()
-            allQuery = movies_ref.get()
-            finishedQuery = []
-            for doc in allQuery:
-                if doc not in notQuery:
-                    finishedQuery.append(doc)
+            finishedQuery, _ = array_contains_not(query, movies_ref)
         else:
             finishedQuery = movies_ref.where(filter=FieldFilter(query.column, query.operator, query.specification)).stream()
     return finishedQuery
